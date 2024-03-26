@@ -33,37 +33,37 @@ export default function Home(): React.ReactElement {
 
   const headerContainer: React.ReactElement = (
     <div className="cool-container">
-      <div className="inline-block py-2">
+      <div className="hidden sm:inline-block py-2">
         <Image src="grafstrom.svg" className="inline-block" alt="Grafstrom.dev Logo" width="200" height="60">
         </Image>
       </div>
-      <div className="inline-block float-end py-2">
+      <div className="font-bold no-underline text-lg sm:text-2xl text-black/60 inline-block float-end py-2">
         <a
-          className="font-bold no-underline text-2xl text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
           href="#!"
           data-twe-ripple-color="light"
         >Home</a
         >
         <a
-          className="font-bold no-underline text-2xl text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
           href="#!"
 
           data-twe-ripple-color="light"
         >Projects</a
         >
         <div className="inline-block"><a
-          className="font-bold no-underline text-2xl text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
           href="#!"
           data-twe-ripple-color="light"
         >Work Experience</a
         ></div>
         <a
-          className="font-bold no-underline text-2xl text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
           href="#!"
           data-twe-ripple-color="light"
         >Education</a>
         <a
-          className="font-bold no-underline text-2xl text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
           href="#!"
           data-twe-ripple-color="light"
         >Contact</a>
