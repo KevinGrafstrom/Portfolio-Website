@@ -90,7 +90,7 @@ export default function Home(): React.ReactElement {
     <div className="overflow-hidden m-auto text-left py-8 bg-blue-950">
       <div className="cool-container">
         <div className="approach-column">
-          <div className="text-7xl text-left font-bold text-white pt-2">
+          <div className="text-6xl sm:text-7xl text-left font-bold text-white pt-2">
             An <span className="text-amber-600">Artistic</span> Approach to <span className="text-pink-600">Software Development</span>
           </div>
           <div className="text-2xl text-left pt-8 pb-4 text-white">
@@ -108,7 +108,7 @@ export default function Home(): React.ReactElement {
 
     <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
-           ref={firstText}>👇🏻Recent PProjects👇🏻
+           ref={firstText}>👇🏻Recent Projects👇🏻
       </div>
       <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
            style={{bottom: "96px"}} ref={secondText}>👇🏻Recent Projects👇🏻
