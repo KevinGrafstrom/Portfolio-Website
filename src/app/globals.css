@@ -2,32 +2,373 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.creative-illustration {
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+    max-width: 840px;
+    width: 100%;
+    padding-top: 0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.approach-column {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.cool-container {
+    width: 93%;
+    max-width: 1290px;
+    margin: auto;
+}
+
+.cool-flex-container {
+    width: 93%;
+    max-width: 1290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.cool-flex-container-bottom {
+    margin-top: 30px;
+    width: 93%;
+    max-width: 1290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copilot-column {
+    float: left;
+}
+
+.social-column {
+    max-width: 100%;
+}
+
+.social-illustration {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.web-column {
+    max-width: 100%;
+}
+
+.web-illustration {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.budget-illustration {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.forma-column {
+    overflow: hidden;
+    text-align: left;
+
+}
+
+.indigo-column {
+    overflow: hidden;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-top: 60px;
+
+}
+
+.trainer-column {
+    overflow: hidden;
+    text-align: left;
+}
+
+.chatkitty-column {
+    overflow: hidden;
+    text-align: left;
+
+}
+
+.self-employed-column {
+    overflow: hidden;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-top: 60px;
+
+}
+
+.indigo-date {
+    display: inline-block;
+    float: left;
+}
+
+.forma-date {
+    display: inline-block;
+    float: left;
+}
+
+.indigo-illustration {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.ai-illustration {
+    max-width: 500px;
+}
+
+.chat-illustration {
+    max-width: 2000px;
+}
+
+.chat-scroll-container {
+  overscroll-behavior: none;
+    scroll-behavior: none;
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+
+
+@media (min-width: 640px) {
+    .indigo-date {
+        display: inline-block;
+        float: right;
+    }
+    .forma-date {
+        display: inline-block;
+        float: right;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+    .contact-column {
+        max-width: 550px;
+    }
+    .cool-flex-container {
+        flex-direction: row;
+    }
+
+     .cool-flex-container-bottom {
+         margin-top: 0;
+        flex-direction: row;
+    }
+
+    .creative-illustration {
+        float: right;
+        width: calc(100% - 460px);
+        padding-top: calc(330px - 26%);
+    }
+
+    .approach-column {
+        width: 460px;
+    }
+
+    .apply-illustration {
+        padding-top: calc(290px - 25%);
+        width: calc(100% - 500px);
+        max-width: 600px;
+    }
+
+    .copilot-column {
+        float: right;
+        max-width: 500px;
+    }
+
+    .social-illustration {
+        padding-top: calc(300px - 20%);
+        float: right;
+        width: calc(100% - 500px);
+        max-width: 670px;
+    }
+
+    .social-column {
+        float: left;
+        max-width: 500px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+    }
+
+    .web-illustration {
+        padding-top: calc(270px - 20%);
+        float: right;
+        width: calc(100% - 500px);
+        max-width: 570px;
+    }
+
+    .web-column {
+        float: left;
+        max-width: 500px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+
+    }
+
+    .processor-illustration {
+        padding-top: calc(310px - 20%);
+        float: right;
+        width: calc(100% - 600px);
+        max-width: 500px;
+    }
+
+    .kevin-illustration {
+        max-width: 400px;
+        overflow: hidden;
+    }
+
+    .kevin-centerer {
+        width: 600px;
+    }
+
+    .processor-column {
+        float: left;
+        max-width: 550px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding-right: 50px;
+
+    }
+
+    .budget-column {
+        float: right;
+        max-width: 550px;
+
+    }
+
+    .music-column {
+        float: right;
+        max-width: 550px;
+        margin-bottom: 40px;
+
+    }
+
+    .forma-column {
+        float: right;
+        max-width: 600px;
+        text-align: left;
+
+    }
+
+    .chatkitty-column {
+        float: right;
+        max-width: 600px;
+        text-align: left;
+    }
+
+    .indigo-column {
+        float: left;
+        max-width: 600px;
+        margin-bottom: 40px;
+        text-align: left;
+
+    }
+
+    .trainer-column {
+        float: left;
+        max-width: 600px;
+        text-align: left;
+
+    }
+
+    .self-employed-column {
+        float: left;
+        max-width: 600px;
+        margin-bottom: 40px;
+        text-align: left;
+
+    }
+
+    .music-illustration {
+        float: left;
+        width: calc(100% - 600px);
+        max-width: 390px;
+        margin-right: 50px;
+        padding-top: calc(20px);
+    }
+
+    .commission-illustration {
+        float: left;
+        max-width: 660px;
+    }
+
+    .indigo-illustration {
+        float: right;
+        width: calc(100% - 600px);
+        max-width: 310px;
+        margin-right: calc(50% - 500px);
+        padding-top: 30px;
+    }
+
+    .ai-illustration {
+        max-width: 420px;
+        margin-left: 30px;
+    }
+
+    .chat-illustration {
+        float: left;
+        max-width: 500px;
+        margin-right: 50px;
+    }
+
+    .uoft-column {
+        float: right;
+        width: 600px;
+        margin-bottom: 40px;
+        margin-left: 30px;
+        text-align: left;
+        overflow: hidden;
+
+    }
+
+    .uoft-illustration {
+        max-width: 480px;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .budget-illustration {
+        padding-top: 25px;
+    }
+
+    .web-illustration {
+        padding-top: 25px;
+    }
+
+    .processor-illustration {
+        padding-top: 65px;
+    }
+
+    .indigo-illustration {
+        padding-top: 30px;
+    }
+
+}
+
+@media (min-width: 1536px) {
+
+
 }
