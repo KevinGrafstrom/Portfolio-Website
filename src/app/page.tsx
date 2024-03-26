@@ -94,7 +94,7 @@ export default function Home(): React.ReactElement {
             An <span className="text-amber-600">Artistic</span> Approach to <span className="text-pink-600">Software Development</span>
           </div>
           <div className="text-2xl text-left pt-8 pb-4 text-white">
-            I combine my experience studying computer engineering at the University of Toronto
+            My name is <span className="text-pink-600">Kevin Grafstrom</span>. I combine my experience studying computer engineering at the University of Toronto
             and working as a software developer with the creativity I developed in a rock band.
           </div>
         </div>
