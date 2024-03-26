@@ -108,10 +108,10 @@ export default function Home(): React.ReactElement {
 
     <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
-           ref={firstText}>👇🏻Recent Personal Projects👇🏻
+           ref={firstText}>👇🏻Recent Projects👇🏻
       </div>
       <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
-           style={{bottom: "96px"}} ref={secondText}>👇🏻Recent Personal Projects👇🏻
+           style={{bottom: "96px"}} ref={secondText}>👇🏻Recent Projects👇🏻
       </div>
       <div className="whitespace-nowrap block sm:block md:block lg:blo  ck xl:hidden 2xl:hidden"
            ref={thirdText}>Projects👇🏻

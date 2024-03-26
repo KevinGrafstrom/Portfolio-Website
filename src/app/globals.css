@@ -4,6 +4,7 @@
 
 html {
     overflow-x: hidden;
+    font-family: Arial, sans-serif;
 
 }
 
@@ -74,12 +75,12 @@ html {
 @media (min-width: 1024px) {
     .creative-illustration {
         float: right;
-        width: calc(100% - 440px);
+        width: calc(100% - 460px);
         padding-top: calc(330px - 26%);
     }
 
     .approach-column {
-        width: 440px;
+        width: 460px;
     }
 
     .apply-illustration {
