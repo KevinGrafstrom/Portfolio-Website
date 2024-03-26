@@ -108,16 +108,16 @@ export default function Home(): React.ReactElement {
 
     <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
-           ref={firstText}>👇🏻Recent Projects👇🏻
+           ref={firstText}>👇🏻Recent PProjects👇🏻
       </div>
       <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
            style={{bottom: "96px"}} ref={secondText}>👇🏻Recent Projects👇🏻
       </div>
       <div className="whitespace-nowrap block sm:block md:block lg:blo  ck xl:hidden 2xl:hidden"
-           ref={thirdText}>Projects👇🏻
+           ref={thirdText}>Projects
       </div>
       <div className="relative whitespace-nowrap block sm:block md:block lg:block xl:hidden 2xl:hidden"
-           style={{bottom: "96px"}} ref={fourthText}>Projects👇🏻
+           style={{bottom: "96px"}} ref={fourthText}>Projects
       </div>
     </div>
 
@@ -140,7 +140,7 @@ export default function Home(): React.ReactElement {
         <div className="apply-illustration">
 
           <Image src="apply.svg" alt="Grafstrom.dev Logo" width="1200" height="0"
-                 style={{marginTop: '-20px', marginBottom: "-10px", marginLeft: "-50px"}}>
+                 style={{marginTop: '0px', marginBottom: "-10px", marginLeft: "-50px"}}>
           </Image>
         </div>
 
@@ -220,7 +220,8 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left pb-4 pt-8">
 
-            Other than the stock images, which I got from stockphotos.com and have a license to use, I created this website
+            Other than the stock images, which I got from stockphotos.com and have a license to use, I created this
+            website
             entirely by myself using Next.js, React, Tailwind CSS, and TypeScript.
 
           </div>
