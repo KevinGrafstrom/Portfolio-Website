@@ -311,6 +311,44 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
+    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-container overflow-hidden">
+
+        <div className="forma-column overflow-hidden">
+          <div className="inline-block" style={{marginLeft: "-10px"}}>
+            <Image src="/forma-ai.webp" alt="Grafstrom.dev Logo" width="90" height="0">
+            </Image>
+          </div>
+          <div className="text-6xl text-left font-bold inline-block overflow-hidden pb-4 pl-2">
+            FORMA.AI
+          </div>
+
+          <div className="text-2xl text-left pb-4">
+            <div className="inline-block"><b>Software Engineer</b></div>
+
+            <div className="inline-block float-right"><b>May 2022 - Aug. 2023</b></div>
+
+          </div>
+
+          <div className="text-2xl text-left pb-4">
+
+            I refined the data ingestion and ETL pipeline for calculating sales commissions. I also reduced load times
+            for calculations table by 80% with React, TypeScript, and Django.
+            I Implemented a user interface for adding manual adjustment to commissions paid.
+            I built and debugged Docker containers running on Amazon Web Services EC2 and ECS.
+            I wrote Spark data transformations to run on the Databricks Lakehouse Platform.
+
+          </div>
+        </div>
+
+        <div className="commission-illustration">
+          <Image src="commission.svg" alt="Grafstrom.dev Logo" width="1100" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
     </body>
     </html>
   )

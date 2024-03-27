@@ -64,6 +64,15 @@ html {
     padding-bottom: 20px;
 }
 
+.forma-column {
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+        padding-top: 30px;
+
+    }
+
 
 @media (min-width: 640px) {
 }
@@ -152,10 +161,24 @@ html {
         margin-bottom: 40px;
 
     }
+    .forma-column {
+        float: right;
+        max-width: 505px;
+        margin-bottom: 40px;
+        text-align: left;
+
+    }
     .music-illustration {
         float: left;
         width: calc(100% - 600px);
         max-width: 390px;
+        margin-right: 50px;
+        padding-top: calc(20px);
+    }
+    .commission-illustration {
+        float: left;
+        width: calc(100% - 600px);
+        max-width: 660px;
         margin-right: 50px;
         padding-top: calc(20px);
     }
