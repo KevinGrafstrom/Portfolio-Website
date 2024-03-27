@@ -13,6 +13,11 @@ export default function Home(): React.ReactElement {
   const secondText = useRef(null);
   const thirdText = useRef(null);
   const fourthText = useRef(null);
+
+  const fifthText = useRef(null);
+  const sixthText = useRef(null);
+  const seventhText = useRef(null);
+  const eighthText = useRef(null);
   let xPercent = 0;
 
   useEffect(() => {
@@ -20,11 +25,13 @@ export default function Home(): React.ReactElement {
   }, []);
 
   const animation = () => {
-    gsap.set(firstText.current, {xPercent: xPercent});
-    gsap.set(thirdText.current, {xPercent: xPercent});
-    gsap.set(secondText.current, {xPercent: ((xPercent + 100 + 100) % 200 - 100)});
-    gsap.set(fourthText.current, {xPercent: ((xPercent + 100 + 100) % 200 - 100)});
-    xPercent += 0.02;
+    for (const alignedElement of [firstText, thirdText, fifthText, seventhText]) {
+      gsap.set(alignedElement.current, {xPercent: xPercent});
+    }
+    for (const misalignedElement of [secondText, fourthText, sixthText, eighthText]) {
+      gsap.set(misalignedElement.current, {xPercent: ((xPercent + 100 + 100) % 200 - 100)});
+    }
+    xPercent += 0.03;
     if (xPercent > 100) {
       xPercent = -100;
     }
@@ -94,7 +101,8 @@ export default function Home(): React.ReactElement {
             An <span className="text-amber-600">Artistic</span> Approach to <span className="text-pink-600">Software Development</span>
           </div>
           <div className="text-2xl text-left pt-8 pb-4 text-white">
-            My name is <span className="text-pink-600">Kevin Grafstrom</span>. I combine my experience studying computer engineering at the University of Toronto
+            My name is <span className="text-pink-600">Kevin Grafstrom</span>. I combine my experience studying computer
+            engineering at the University of Toronto
             and working as a software developer with the creativity I developed in a rock band.
           </div>
         </div>
@@ -222,7 +230,7 @@ export default function Home(): React.ReactElement {
 
             Other than the stock images, which I got from stockphotos.com and have a license to use, I created this
             website
-            entirely by myself using Next.js, React, Tailwind CSS, and TypeScript.
+            entirely by myself using Next.js, React, Tailwind CSS, TypeScript, and NGINX.
 
           </div>
         </div>
@@ -232,6 +240,74 @@ export default function Home(): React.ReactElement {
                  style={{marginTop: '0px', marginBottom: "10px"}}>
           </Image>
         </div>
+      </div>
+    </div>
+
+    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-container">
+
+        <div className="music-column">
+          <div className="text-7xl text-left font-bold pt-8 pb-4">
+            <span className="text-pink-600">Music</span> Trends <span
+            className="text-pink-600">Prediction</span> Database
+            {/*Personal <span className="text-pink-600">Finance</span> Analyzer*/}
+          </div>
+
+          <div className="text-2xl text-left pb-4">
+
+            A friend and I queried the Spotify API to transfer data for the most popular artists into a PostgreSQL
+            database.
+            We used linear regression to determine the fastest growing artists and genres.
+
+          </div>
+        </div>
+
+        <div className="music-illustration">
+          <Image src="music.svg" alt="Grafstrom.dev Logo" width="1000" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-blue-950 text-white overflow-hidden pb-12">
+      <div className="cool-container">
+        <div className="processor-column">
+          <div className="text-7xl text-left font-bold pt-8 pb-4">
+            {/*This <span className="text-pink-600">Portfolio</span> Website*/}
+            FPGA <span className="text-pink-600">Processor</span> in Verilog
+          </div>
+
+          <div className="text-2xl text-left pb-4 pt-8">
+
+            In a computer hardware course I took at U of T, there was a competition that involved
+            implementing a processor on an FPGA using Verilog. Designs were ranked by the number of assembly
+            instructions they completed per second.
+            My teammate and I scored second place, which gave us a bonus 4.5% on each of our final grades.
+
+          </div>
+        </div>
+
+        <div className="processor-illustration">
+          <Image src="processor.svg" alt="Grafstrom.dev Logo" width="800" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
+      <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+           ref={fifthText}>👇🏻Work Experience👇🏻
+      </div>
+      <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+           style={{bottom: "96px"}} ref={sixthText}>👇🏻Work Experience👇🏻
+      </div>
+      <div className="whitespace-nowrap block sm:block md:block lg:blo  ck xl:hidden 2xl:hidden"
+           ref={seventhText}>Experience
+      </div>
+      <div className="relative whitespace-nowrap block sm:block md:block lg:block xl:hidden 2xl:hidden"
+           style={{bottom: "96px"}} ref={eighthText}>Work
       </div>
     </div>
 

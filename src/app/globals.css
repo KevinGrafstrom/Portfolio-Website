@@ -103,11 +103,12 @@ html {
     .social-column {
         float: left;
         max-width: 500px;
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
 
     }
     .web-illustration {
-        padding-top: calc(300px - 20%);
+        padding-top: calc(270px - 20%);
         float: right;
         width: calc(100% - 500px);
         max-width: 570px;
@@ -116,6 +117,21 @@ html {
         float: left;
         max-width: 500px;
         margin-top: 20px;
+        margin-bottom: 40px;
+
+    }
+    .processor-illustration {
+        padding-top: calc(270px - 20%);
+        float: right;
+        width: calc(100% - 500px);
+        max-width: 570px;
+    }
+    .processor-column {
+        float: left;
+        max-width: 500px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding-right: 50px;
 
     }
     .budget-column {
@@ -130,6 +146,19 @@ html {
         margin-right: 50px;
         padding-top: calc(380px - 30%);
     }
+    .music-column {
+        float: right;
+        max-width: 550px;
+        margin-bottom: 40px;
+
+    }
+    .music-illustration {
+        float: left;
+        width: calc(100% - 600px);
+        max-width: 390px;
+        margin-right: 50px;
+        padding-top: calc(20px);
+    }
 
 }
 
@@ -140,15 +169,13 @@ html {
     .web-illustration {
         padding-top: 25px;
     }
+    .processor-illustration {
+        padding-top: 25px;
+    }
 
 }
 
 @media (min-width: 1536px) {
-    .budget-illustration {
-        padding-top: 25px;
-    }
-    .web-illustration {
-        padding-top: 25px;
-    }
+
 
 }
