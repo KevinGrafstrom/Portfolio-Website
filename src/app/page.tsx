@@ -457,7 +457,7 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left">
 
-            My favourite course was &quot;Communication and Design&quot; because we both made a
+            My favourite course was &quot;Communication and Design&quot; because we made a
             Google Maps clone and wrote documents explaining our design choices. This allowed us
             to develop our technical and writing skills in the same course. I also found &quot;
             Computer Networks&quot; very useful for understanding server and client communication
