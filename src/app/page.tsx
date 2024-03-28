@@ -2,6 +2,7 @@
 import Image from "next/image";
 import {useEffect, useRef} from "react";
 import gsap from 'gsap';
+import Link from "next/link";
 
 // export const metadata: Metadata = {
 //   title: 'Grafstrom.dev',
@@ -18,6 +19,21 @@ export default function Home(): React.ReactElement {
   const sixthText = useRef(null);
   const seventhText = useRef(null);
   const eighthText = useRef(null);
+  const ninthText = useRef(null);
+  const tenthText = useRef(null);
+
+  const eleventhText = useRef(null);
+  const twelfthText = useRef(null);
+  const thirteenthText = useRef(null);
+  const fourteenthText = useRef(null);
+  const fifteenthText = useRef(null);
+
+  const sixteenthText = useRef(null);
+  const seventeenthText = useRef(null);
+  const eighteenthText = useRef(null);
+  const nineteenthText = useRef(null);
+  const twentiethText = useRef(null);
+
   let xPercent = 0;
 
   useEffect(() => {
@@ -25,10 +41,12 @@ export default function Home(): React.ReactElement {
   }, []);
 
   const animation = () => {
-    for (const alignedElement of [firstText, thirdText, fifthText, seventhText]) {
+    for (const alignedElement of [firstText, thirdText, fifthText, seventhText, ninthText,
+      eleventhText, thirteenthText, fifteenthText, sixteenthText, eighteenthText, twentiethText]) {
       gsap.set(alignedElement.current, {xPercent: xPercent});
     }
-    for (const misalignedElement of [secondText, fourthText, sixthText, eighthText]) {
+    for (const misalignedElement of [secondText, fourthText, sixthText, eighthText, tenthText,
+      twelfthText, fourteenthText, seventeenthText, nineteenthText]) {
       gsap.set(misalignedElement.current, {xPercent: ((xPercent + 100 + 100) % 200 - 100)});
     }
     xPercent += 0.03;
@@ -45,35 +63,35 @@ export default function Home(): React.ReactElement {
         </Image>
       </div>
       <div className="font-bold no-underline text-lg sm:text-2xl text-black/60 inline-block float-end py-2">
-        <a
+        <Link
           className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
-          href="#!"
+          href="#home"
           data-twe-ripple-color="light"
-        >Home</a
+        >Home</Link
         >
-        <a
+        <Link
           className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
-          href="#!"
+          href="#projects"
 
           data-twe-ripple-color="light"
-        >Projects</a
+        >Projects</Link
         >
-        <div className="inline-block"><a
+        <div className="inline-block"><Link
           className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
-          href="#!"
+          href="#work"
           data-twe-ripple-color="light"
-        >Work Experience</a
+        >Work Experience</Link
         ></div>
-        <a
+        <Link
           className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
-          href="#!"
+          href="#education"
           data-twe-ripple-color="light"
-        >Education</a>
-        <a
+        >Education</Link>
+        <Link
           className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
-          href="#!"
+          href="#contact"
           data-twe-ripple-color="light"
-        >Contact</a>
+        >Contact</Link>
       </div>
     </div>
   )
@@ -89,7 +107,7 @@ export default function Home(): React.ReactElement {
 
     </header>
 
-    <div className="bg-blue-100 overflow-hidden invisible">
+    <div className="bg-blue-100 overflow-hidden invisible" id="home">
       {headerContainer}
     </div>
 
@@ -113,6 +131,8 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
+    <div id="projects" className="relative" style={{bottom: "60px"}}></div>
+
 
     <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
@@ -130,10 +150,10 @@ export default function Home(): React.ReactElement {
     </div>
 
 
-    <div className="bg-white pt-8 overflow-hidden">
+    <div className="bg-white pt-0 overflow-hidden">
       <div className="cool-container">
         <div className="copilot-column">
-          <div className="text-7xl text-left font-bold pt-4 pb-4 bg-white">
+          <div className="text-7xl text-left font-bold pt-8 pb-4 bg-white">
             Job Application <span className="text-pink-600">Copilot</span>
           </div>
           <div className="text-2xl text-left pb-4 text-black">
@@ -296,6 +316,8 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
+    <div id="work" className="relative" style={{bottom: "60px"}}></div>
+
     <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
            ref={fifthText}>👇🏻Work Experience👇🏻
@@ -303,38 +325,46 @@ export default function Home(): React.ReactElement {
       <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
            style={{bottom: "96px"}} ref={sixthText}>👇🏻Work Experience👇🏻
       </div>
-      <div className="whitespace-nowrap block sm:block md:block lg:blo  ck xl:hidden 2xl:hidden"
-           ref={seventhText}>Experience
+      <div className="whitespace-nowrap hidden sm:hidden md:block lg:block xl:hidden 2xl:hidden"
+           ref={seventhText}>Work Exp.
       </div>
-      <div className="relative whitespace-nowrap block sm:block md:block lg:block xl:hidden 2xl:hidden"
-           style={{bottom: "96px"}} ref={eighthText}>Work
+      <div className="relative whitespace-nowrap hidden sm:hidden md:block lg:block xl:hidden 2xl:hidden"
+           style={{bottom: "96px"}} ref={eighthText}>Work Exp.
+      </div>
+      <div className="whitespace-nowrap block sm:block md:hidden lg:hidden xl:hidden 2xl:hidden"
+           ref={ninthText}>Work
+      </div>
+      <div className="relative whitespace-nowrap block sm:block md:hidden lg:hidden xl:hidden 2xl:hidden"
+           style={{bottom: "96px"}} ref={tenthText}>Exp.
       </div>
     </div>
 
     <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-container overflow-hidden">
+      <div className="cool-container">
 
         <div className="forma-column overflow-hidden">
-          <div className="inline-block" style={{marginLeft: "-10px"}}>
-            <Image src="/forma-ai.webp" alt="Grafstrom.dev Logo" width="90" height="0">
-            </Image>
-          </div>
-          <div className="text-6xl text-left font-bold inline-block overflow-hidden pb-4 pl-2">
-            FORMA.AI
-          </div>
-
-          <div className="text-2xl text-left pb-4">
-            <div className="inline-block"><b>Software Engineer</b></div>
-
-            <div className="inline-block float-right"><b>May 2022 - Aug. 2023</b></div>
-
+          <div className="mb-4">
+            <div className="inline-block" style={{marginLeft: "-10px"}}>
+              <Image src="/forma-ai.webp" alt="Grafstrom.dev Logo" width="90" height="0">
+              </Image>
+            </div>
+            <div className="text-6xl text-left font-bold inline-block overflow-hidden pb-4 pl-2">
+              FORMA.AI
+            </div>
           </div>
 
-          <div className="text-2xl text-left pb-4">
+          <div className="text-2xl text-left mb-7 overflow-hidden leading-9">
+            <div className="inline-block float-left mr-4"><b>Software Engineer</b></div>
+
+            <div className="forma-date"><b>May 2022 - Aug. 2023</b></div>
+
+          </div>
+
+          <div className="text-2xl text-left">
 
             I refined the data ingestion and ETL pipeline for calculating sales commissions. I also reduced load times
             for calculations table by 80% with React, TypeScript, and Django.
-            I Implemented a user interface for adding manual adjustment to commissions paid.
+            I Implemented a user interface for adding manual adjustments to commissions paid.
             I built and debugged Docker containers running on Amazon Web Services EC2 and ECS.
             I wrote Spark data transformations to run on the Databricks Lakehouse Platform.
 
@@ -348,6 +378,144 @@ export default function Home(): React.ReactElement {
         </div>
       </div>
     </div>
+
+    <div className="bg-blue-950 text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-container">
+
+        <div className="indigo-column overflow-hidden text-white">
+          <div className="mb-4 mt-4">
+            <div className="inline-block" style={{marginLeft: "0px"}}>
+              <Image src="/indigo.png" alt="Grafstrom.dev Logo" width="180" height="0">
+              </Image>
+            </div>
+          </div>
+
+          <div className="text-2xl leading-9 text-left mb-7 overflow-hidden">
+            <div className="inline-block float-left mr-4"><b>Junior QA Developer</b></div>
+
+            <div className="indigo-date"><b>July 2017 - Aug. 2018</b></div>
+
+          </div>
+
+          <div className="text-2xl text-left pb-4 mt-4">
+
+            I wrote more than 50 automated tests to increase test coverage of the Indigo website using Java and
+            Selenium.
+            I collaborated with other developers to choose the best test cases. I also performed A/B testing
+            on different internal search systems to help optimize the ordering of search results. During this time, I
+            wrote
+            more than 20 articles on Confluence explaining our testing methodology.
+
+          </div>
+        </div>
+
+        <div className="indigo-illustration">
+          <Image src="books.svg" alt="Grafstrom.dev Logo" width="600" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div id="education" className="relative" style={{bottom: "60px"}}></div>
+
+    <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
+      <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:block xl:block 2xl:block"
+           ref={eleventhText}>👇🏻Education👇🏻
+      </div>
+      <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:block xl:block 2xl:block"
+           style={{bottom: "96px"}} ref={twelfthText}>👇🏻Education👇🏻
+      </div>
+      <div className="whitespace-nowrap hidden sm:block md:block lg:hidden xl:hidden 2xl:hidden"
+           ref={thirteenthText}>Education
+      </div>
+      <div className="relative whitespace-nowrap hidden sm:block md:block lg:hidden xl:hidden 2xl:hidden"
+           style={{bottom: "96px"}} ref={fourteenthText}>Education
+      </div>
+      <div className="whitespace-nowrap block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden"
+           ref={fifteenthText}>Education
+      </div>
+    </div>
+
+    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-container">
+
+        <div className="uoft-column">
+          <div className="py-12">
+            <div className="inline-block">
+              <Image src="/uoft.png" alt="Grafstrom.dev Logo" width="500" height="0">
+              </Image>
+            </div>
+          </div>
+
+          <div className="text-2xl text-left mb-7 overflow-hidden leading-9">
+            <div className="mr-4"><b>Bachelor&apos;s in Computer Engineering</b></div>
+
+            <div><b>Graduated June 2022</b></div>
+
+          </div>
+
+          <div className="text-2xl text-left">
+
+            My favourite course was &quot;Communication and Design&quot; because we both made a
+            Google Maps clone and wrote documents explaining our design choices. This allowed us
+            to develop our technical and writing skills in the same course. I also found &quot;
+            Computer Networks&quot; very useful for understanding server and client communication
+            in web development.
+
+          </div>
+        </div>
+
+        <div className="uoft-illustration">
+          <Image src="student.svg" alt="Grafstrom.dev Logo" width="1100" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" className="relative" style={{bottom: "60px"}}></div>
+
+    <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
+      <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:block xl:block 2xl:block"
+           ref={sixteenthText}>👇🏻Contact👇🏻
+      </div>
+      <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:block xl:block 2xl:block"
+           style={{bottom: "96px"}} ref={seventeenthText}>👇🏻Contact👇🏻
+      </div>
+      <div className="whitespace-nowrap hidden sm:block md:block lg:hidden xl:hidden 2xl:hidden"
+           ref={eighteenthText}>Contact
+      </div>
+      <div className="relative whitespace-nowrap hidden sm:block md:block lg:hidden xl:hidden 2xl:hidden"
+           style={{bottom: "96px"}} ref={nineteenthText}>Contact
+      </div>
+      <div className="whitespace-nowrap block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden"
+           ref={twentiethText}>Contact
+      </div>
+    </div>
+
+    <div className="bg-blue-950 text-white overflow-hidden">
+      <div className="cool-container">
+        <div className="contact-column">
+          <div className="text-7xl text-left font-bold pt-0 pb-2">
+            Let&apos;s Create the <span className="text-pink-600">Next Big Thing</span>!
+          </div>
+
+          <div className="text-2xl text-left pt-8">
+
+            You can email me with any inquiries at <Link href="mailto:kevin@grafstrom.dev"
+                                                         className="text-pink-600">kevin@grafstrom.dev</Link>
+
+          </div>
+        </div>
+
+        <div className="kevin-illustration">
+          <Image src="/kevin.jpg" alt="Grafstrom.dev Logo" width="800" height="0">
+          </Image>
+        </div>
+      </div>
+    </div>
+
 
     </body>
     </html>

@@ -49,6 +49,7 @@ html {
     padding-bottom: 30px;
     overflow: hidden;
 }
+
 .web-column {
     max-width: 100%;
 }
@@ -65,16 +66,52 @@ html {
 }
 
 .forma-column {
-        overflow: hidden;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
-        padding-top: 30px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-top: 30px;
 
-    }
+}
+
+.indigo-column {
+    overflow: hidden;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-top: 30px;
+
+}
+
+.indigo-date {
+    display: inline-block;
+    float: left;
+}
+
+.forma-date {
+    display: inline-block;
+    float: left;
+}
+
+.indigo-illustration {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-column {
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
 
 
 @media (min-width: 640px) {
+    .indigo-date {
+        display: inline-block;
+        float: right;
+    }
+    .forma-date {
+        display: inline-block;
+        float: right;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -93,9 +130,9 @@ html {
     }
 
     .apply-illustration {
-        padding-top: calc(300px - 25%);
+        padding-top: calc(290px - 25%);
         width: calc(100% - 500px);
-        max-width: 700px;
+        max-width: 600px;
     }
 
     .copilot-column {
@@ -109,6 +146,7 @@ html {
         width: calc(100% - 500px);
         max-width: 670px;
     }
+
     .social-column {
         float: left;
         max-width: 500px;
@@ -116,12 +154,14 @@ html {
         margin-bottom: 20px;
 
     }
+
     .web-illustration {
         padding-top: calc(270px - 20%);
         float: right;
         width: calc(100% - 500px);
         max-width: 570px;
     }
+
     .web-column {
         float: left;
         max-width: 500px;
@@ -129,25 +169,37 @@ html {
         margin-bottom: 40px;
 
     }
+
     .processor-illustration {
-        padding-top: calc(270px - 20%);
+        padding-top: calc(310px - 20%);
         float: right;
-        width: calc(100% - 500px);
-        max-width: 570px;
+        width: calc(100% - 600px);
+        max-width: 500px;
     }
+
+    .kevin-illustration {
+        float: right;
+        width: 400px;
+        max-width: 500px;
+        overflow: hidden;
+        margin-right: calc(90% - 900px);
+    }
+
     .processor-column {
         float: left;
-        max-width: 500px;
+        max-width: 550px;
         margin-top: 20px;
         margin-bottom: 40px;
         padding-right: 50px;
 
     }
+
     .budget-column {
         float: right;
         max-width: 550px;
 
     }
+
     .budget-illustration {
         float: left;
         width: calc(100% - 600px);
@@ -155,12 +207,14 @@ html {
         margin-right: 50px;
         padding-top: calc(380px - 30%);
     }
+
     .music-column {
         float: right;
         max-width: 550px;
         margin-bottom: 40px;
 
     }
+
     .forma-column {
         float: right;
         max-width: 505px;
@@ -168,6 +222,15 @@ html {
         text-align: left;
 
     }
+
+    .indigo-column {
+        float: left;
+        max-width: 600px;
+        margin-bottom: 40px;
+        text-align: left;
+
+    }
+
     .music-illustration {
         float: left;
         width: calc(100% - 600px);
@@ -175,12 +238,42 @@ html {
         margin-right: 50px;
         padding-top: calc(20px);
     }
+
     .commission-illustration {
         float: left;
         width: calc(100% - 600px);
         max-width: 660px;
-        margin-right: 50px;
-        padding-top: calc(20px);
+        padding-top: calc(540px - 40%);
+    }
+
+    .indigo-illustration {
+        float: right;
+        width: calc(100% - 600px);
+        max-width: 310px;
+        margin-right: calc(50% - 500px);
+        padding-top: 30px;
+    }
+
+    .uoft-column {
+        float: right;
+        width: 600px;
+        margin-bottom: 40px;
+        margin-left: 30px;
+        text-align: left;
+        overflow: hidden;
+
+    }
+
+    .uoft-illustration {
+        float: left;
+        width: calc(100% - 640px);
+        max-width: 480px;
+        padding-top: calc(350px - 25%);
+    }
+
+    .contact-column {
+        max-width: 500px;
+        display: inline-block;
     }
 
 }
@@ -189,11 +282,25 @@ html {
     .budget-illustration {
         padding-top: 25px;
     }
+
     .web-illustration {
         padding-top: 25px;
     }
+
     .processor-illustration {
-        padding-top: 25px;
+        padding-top: 65px;
+    }
+
+    .commission-illustration {
+        padding-top: 45px;
+    }
+
+    .indigo-illustration {
+        padding-top: 30px;
+    }
+
+    .uoft-illustration {
+        padding-top: 60px;
     }
 
 }
