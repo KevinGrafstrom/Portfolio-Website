@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Grafstrom.dev',
-  description: 'Kevin Grafstrom - Software Developer',
+  title: 'Kevin Grafstrom | Software Developer',
+  description: 'Kevin Grafstrom - Software Developer'
 }
 
 export default function RootLayout({
