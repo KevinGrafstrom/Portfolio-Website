@@ -97,7 +97,6 @@ html {
 }
 
 .contact-column {
-    margin-bottom: 50px;
     padding-top: 20px;
 }
 
@@ -182,7 +181,7 @@ html {
         width: 400px;
         max-width: 500px;
         overflow: hidden;
-        margin-right: calc(90% - 900px);
+        margin-right: 0;
     }
 
     .processor-column {
@@ -301,6 +300,9 @@ html {
 
     .uoft-illustration {
         padding-top: 60px;
+    }
+    .kevin-illustration {
+        margin-right: 110px;
     }
 
 }

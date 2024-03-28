@@ -497,7 +497,7 @@ export default function Home(): React.ReactElement {
     <div className="bg-blue-950 text-white overflow-hidden">
       <div className="cool-container">
         <div className="contact-column">
-          <div className="text-7xl text-left font-bold pt-0 pb-2">
+          <div className="text-7xl text-left font-bold pt-2">
             Let&apos;s Create the <span className="text-pink-600">Next Big Thing</span>!
           </div>
 
