@@ -49,7 +49,7 @@ export default function Home(): React.ReactElement {
       twelfthText, fourteenthText, seventeenthText, nineteenthText]) {
       gsap.set(misalignedElement.current, {xPercent: ((xPercent + 100 + 100) % 200 - 100)});
     }
-    xPercent += 0.03;
+    xPercent += 0.07;
     if (xPercent > 100) {
       xPercent = -100;
     }
@@ -173,7 +173,7 @@ export default function Home(): React.ReactElement {
         </div>
 
         <video width="1920" height="1080" controls>
-          <source src="assistant.mp4" type="video/mp4"></source>
+          <source src="Copilot.mp4" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
@@ -203,7 +203,7 @@ export default function Home(): React.ReactElement {
         </div>
 
         <video width="1920" height="1080" controls>
-          <source src="assistant.mp4" type="video/mp4"></source>
+          <source src="Quick Meet.mp4" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
@@ -233,7 +233,7 @@ export default function Home(): React.ReactElement {
         </div>
 
         <video width="1920" height="1080" controls>
-          <source src="assistant.mp4" type="video/mp4"></source>
+          <source src="analyzer.mp4" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
