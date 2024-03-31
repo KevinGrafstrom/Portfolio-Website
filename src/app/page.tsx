@@ -173,7 +173,7 @@ export default function Home(): React.ReactElement {
         </div>
 
         <video width="1920" height="1080" controls preload="metadata">
-          <source src="copilot.mp4#t=0" type="video/mp4"></source>
+          <source src="copilot.mp4#t=0.001" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
@@ -203,7 +203,7 @@ export default function Home(): React.ReactElement {
         </div>
 
         <video width="1920" height="1080" controls preload="metadata">
-          <source src="quick-meet.mp4#t=0" type="video/mp4"></source>
+          <source src="quick-meet.mp4#t=0.001" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
@@ -233,7 +233,7 @@ export default function Home(): React.ReactElement {
         </div>
 
         <video width="1920" height="1080" controls preload="metadata">
-          <source src="analyzer.mp4#t=0" type="video/mp4"></source>
+          <source src="analyzer.mp4#t=0.001" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
