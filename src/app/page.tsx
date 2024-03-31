@@ -363,10 +363,12 @@ export default function Home(): React.ReactElement {
           <div className="text-2xl text-left">
 
             I refined the data ingestion and ETL pipeline for calculating sales commissions. I also reduced load times
-            for calculations table by 80% with React, TypeScript, and Django.
-            I Implemented a user interface for adding manual adjustments to commissions paid.
-            I built and debugged Docker containers running on Amazon Web Services EC2 and ECS.
-            I wrote Spark data transformations to run on the Databricks Lakehouse Platform.
+            for the calculations table by 80% with React, TypeScript, and Django. When one of our clients transitioned
+            from a data warehouse to a data lake, I adapted our internal ETL pipeline so that our results remained
+            accurate and consistent. During this process, I built and debugged Docker containers running on Amazon Web
+            Services EC2 and ECS.
+            I also implemented a user interface for adding manual adjustments to commissions paid.
+            For other clients, I wrote Spark data transformations to run on the Databricks Lakehouse Platform.
 
           </div>
         </div>

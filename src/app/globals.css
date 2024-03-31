@@ -241,9 +241,9 @@ html {
 
     .commission-illustration {
         float: left;
-        width: calc(100% - 600px);
+        width: calc(100% - 520px);
         max-width: 660px;
-        padding-top: calc(540px - 40%);
+        padding-top: calc(600px - 40%);
     }
 
     .indigo-illustration {
@@ -292,7 +292,7 @@ html {
     }
 
     .commission-illustration {
-        padding-top: 45px;
+        padding-top: 125px;
     }
 
     .indigo-illustration {
