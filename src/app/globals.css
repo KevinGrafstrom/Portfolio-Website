@@ -94,6 +94,7 @@ html {
 .indigo-illustration {
     max-width: 500px;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .contact-column {

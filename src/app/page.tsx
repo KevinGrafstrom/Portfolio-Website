@@ -298,7 +298,7 @@ export default function Home(): React.ReactElement {
             FPGA <span className="text-pink-600">Processor</span> in Verilog
           </div>
 
-          <div className="text-2xl text-left pb-4 pt-8">
+          <div className="text-2xl text-left pt-8 mb-10 lg:mb-0">
 
             In a computer hardware course I took at U of T, there was a competition that involved
             implementing a processor on an FPGA using Verilog. Designs were ranked by the number of assembly
@@ -455,7 +455,7 @@ export default function Home(): React.ReactElement {
 
           </div>
 
-          <div className="text-2xl text-left">
+          <div className="text-2xl text-left mb-10 lg:mb-0">
 
             My favourite course was &quot;Communication and Design&quot; because we made a
             Google Maps clone and wrote documents explaining our design choices. This allowed us
