@@ -99,6 +99,7 @@ html {
 
 .contact-column {
     padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 
@@ -179,8 +180,8 @@ html {
 
     .kevin-illustration {
         float: right;
-        width: 400px;
-        max-width: 500px;
+        width: calc(100% - 650px);
+        max-width: 400px;
         overflow: hidden;
         margin-right: 0;
     }
@@ -272,7 +273,8 @@ html {
     }
 
     .contact-column {
-        max-width: 500px;
+        padding-top: calc(15% - 110px);
+        max-width: 650px;
         display: inline-block;
     }
 
@@ -304,6 +306,12 @@ html {
     }
     .kevin-illustration {
         margin-right: 110px;
+    }
+
+    .contact-column {
+        padding-top: 70px;
+        max-width: 650px;
+        display: inline-block;
     }
 
 }
