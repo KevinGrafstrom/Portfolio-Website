@@ -362,12 +362,11 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left">
 
-            I refined the data ingestion and ETL pipeline for calculating sales commissions. I also reduced load times
+            I replicated a client&apos;s data pipeline from Danube into an Oracle implementation with PostgreSQL. I also reduced load times
             for the calculations table by 80% with React, TypeScript, and Django. When one of our clients transitioned
             from a data warehouse to a data lake, I adapted our internal ETL pipeline so that our results remained
             accurate and consistent. During this process, I built and debugged Docker containers running on Amazon Web
-            Services EC2 and ECS.
-            I also implemented a user interface for adding manual adjustments to commissions paid.
+            Services EC2 and ECS. I also implemented a user interface for adding manual adjustments to commissions paid.
             For other clients, I wrote Spark data transformations to run on the Databricks Lakehouse Platform.
 
           </div>
@@ -401,13 +400,11 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left pb-4 mt-4">
 
-            I wrote more than 50 automated tests to increase test coverage of the Indigo website using Java and
+            I wrote more than 30 automated tests for the Indigo website using Java and
             Selenium.
             I collaborated with other developers to choose the best test cases. I also performed A/B testing
-            on different internal search systems to help optimize the ordering of search results. During this time, I
-            wrote
-            more than 20 articles on Confluence explaining our testing methodology.
-
+            on internal search ordering, increasing the search click through rate 15%. During this time, I
+            wrote more than 20 articles on Confluence explaining our testing methodology.
           </div>
         </div>
 
