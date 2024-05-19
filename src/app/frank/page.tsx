@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Frank Li | Piano Teacher',
+  description: 'Modern piano with an emphasis on improvisation, songwriting, and ear training.'
 };
 
 export default function Home() {
