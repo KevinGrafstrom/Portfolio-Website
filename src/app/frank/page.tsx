@@ -35,7 +35,7 @@ export default function Home() {
     <div style={{maxWidth: "70%", margin: "auto"}}>
 
       <div className="mt-10 inline-block" style={{maxWidth: 400, overflow: 'hidden'}}>
-        <img src="/frank.png" width={1080} height={1080} alt="Frank"></img>
+        <Image src="/frank.png" width={1080} height={1080} alt="Frank"></Image>
       </div>
       <div className="bg-emerald-950 overflow-hidden" style={{maxWidth: 500, display: "inline-block", float: "right", marginTop: 70, color: "white"}}>
         <div className="text-7xl font-bold"
