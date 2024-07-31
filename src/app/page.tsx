@@ -338,8 +338,42 @@ export default function Home(): React.ReactElement {
            style={{bottom: "96px"}} ref={tenthText}>Exp.
       </div>
     </div>
-
+    {/*bg-blue-950*/}
     <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-container">
+
+        <div className="indigo-column overflow-hidden">
+          <div className="mb-7 mt-0 text-6xl">
+            <b>Self Employed</b>
+          </div>
+
+          <div className="text-2xl leading-9 text-left mb-7 overflow-hidden">
+            <div className="inline-block float-left mr-4"><b>Coding Data Annotator</b></div>
+
+            <div className="indigo-date"><b>May 2024 - Present</b></div>
+
+          </div>
+
+          <div className="text-2xl text-left pb-4 mt-4">
+
+            I compare and evaluate code outputted by AI models on <a href="https://www.dataannotation.tech"
+                                                                        className="text-pink-600">www.dataannotation.tech</a>.
+            To verify the accuracy of the
+            AI generated code, I execute it locally. I've verified programs written with Python, Angular + TypeScript,
+            and PHP. Then, I write explanations and give ratings for the relative quality of different AI models’ coding
+            outputs.
+          </div>
+        </div>
+
+        <div className="ai-illustration">
+          <Image src="ai training.svg" alt="Grafstrom.dev Logo" width="600" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-blue-950 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-container">
 
         <div className="forma-column overflow-hidden">
@@ -362,7 +396,8 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left">
 
-            I replicated a client&apos;s data pipeline from Danube into an Oracle implementation with PostgreSQL. I also reduced load times
+            I replicated a client&apos;s data pipeline from Danube into an Oracle implementation with PostgreSQL. I also
+            reduced load times
             for the calculations table by 80% with React, TypeScript, and Django. When one of our clients transitioned
             from a data warehouse to a data lake, I adapted our internal ETL pipeline so that our results remained
             accurate and consistent. During this process, I built and debugged Docker containers running on Amazon Web
@@ -380,13 +415,13 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-blue-950 text-black overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
       <div className="cool-container">
 
-        <div className="indigo-column overflow-hidden text-white">
+        <div className="indigo-column overflow-hidden">
           <div className="mb-4 mt-4">
             <div className="inline-block" style={{marginLeft: "0px"}}>
-              <Image src="/indigo.png" alt="Grafstrom.dev Logo" width="180" height="0">
+              <Image src="/indigo-blue.png" alt="Grafstrom.dev Logo" width="180" height="0">
               </Image>
             </div>
           </div>
@@ -436,13 +471,13 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-blue-950 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-container">
 
         <div className="uoft-column">
-          <div className="py-12">
+          <div className="py-3" style={{marginLeft: "-50px"}}>
             <div className="inline-block">
-              <Image src="/uoft.png" alt="Grafstrom.dev Logo" width="500" height="0">
+              <Image src="/uoft3.png" alt="Grafstrom.dev Logo" width="500" height="0">
               </Image>
             </div>
           </div>
@@ -493,7 +528,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-blue-950 text-white overflow-hidden">
+    <div className="bg-white text-black overflow-hidden">
       <div className="cool-container">
         <div className="contact-column">
           <div className="text-7xl text-left font-bold pt-2">
@@ -502,8 +537,8 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left pt-8">
 
-            You can email me with any inquiries at <Link href="mailto:kevin@grafstrom.dev"
-                                                         className="text-pink-600">kevin@grafstrom.dev</Link>
+            You can email me with any inquiries at <Link href="mailto:kevin.grafstrom@gmail.com"
+                                                         className="text-pink-600">kevin.grafstrom@gmail.com</Link>
 
           </div>
         </div>

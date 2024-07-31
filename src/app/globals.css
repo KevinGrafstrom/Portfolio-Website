@@ -81,6 +81,14 @@ html {
 
 }
 
+.self-employed-column {
+    overflow: hidden;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-top: 60px;
+
+}
+
 .indigo-date {
     display: inline-block;
     float: left;
@@ -92,6 +100,12 @@ html {
 }
 
 .indigo-illustration {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.ai-illustration {
     max-width: 500px;
     margin: auto;
     margin-bottom: 30px;
@@ -232,6 +246,14 @@ html {
 
     }
 
+    .self-employed-column {
+        float: left;
+        max-width: 600px;
+        margin-bottom: 40px;
+        text-align: left;
+
+    }
+
     .music-illustration {
         float: left;
         width: calc(100% - 600px);
@@ -252,6 +274,14 @@ html {
         width: calc(100% - 600px);
         max-width: 310px;
         margin-right: calc(50% - 500px);
+        padding-top: 30px;
+    }
+
+    .ai-illustration {
+        float: right;
+        width: calc(100% - 610px);
+        max-width: 420px;
+        margin-right: calc(50% - 550px);
         padding-top: 30px;
     }
 
@@ -317,106 +347,6 @@ html {
 }
 
 @media (min-width: 1536px) {
-
-
-}
-
-/*frank*/
-
-.piano-bg {
-    position: absolute;
-    overflow: hidden;
-    top: 0px;
-    z-index: -100;
-    height: 920px;
-    margin-right: calc(100% - 1400px);
-}
-
-.piano-teacher-column {
-    display: inline-block;
-    padding-top: 8px;
-    overflow: hidden;
-    max-width: 900px;
-}
-
-.intro-column {
-
-    margin: auto;
-}
-
-.cool-container {
-    width: 93%;
-    max-width: 700px;
-    margin: auto;
-}
-
-@media (min-width: 640px) {
-
-}
-
-@media (min-width: 768px) {
-
-
-}
-
-@media (min-width: 1024px) {
-
-    .cool-container {
-        width: 93%;
-        max-width: 1300px;
-        margin: auto;
-    }
-
-    .piano-teacher-column {
-        width: calc(100% - 400px);
-        padding-bottom: calc(360px - 30%);
-
-    }
-
-    .intro-column {
-        text-align: left;
-        max-width: 400px;
-
-        color: white;
-        display: inline-block;
-        overflow: hidden;
-        padding-bottom: 0px;
-    }
-
-    .piano-bg {
-        position: absolute;
-        margin-right: calc(15% - 200px);
-        top: 0px;
-        height: 590px;
-    }
-
-
-
-}
-
-@media (min-width: 1280px) {
-    .piano-teacher-column {
-
-        padding-bottom: 0px;
-    }
-
-    .intro-column {
-        padding-top: calc(310px - 25%);
-        padding-bottom: calc(25% - 300px);
-    }
-
-    .piano-bg {
-        margin-right: 0;
-    }
-
-}
-
-@media (min-width: 1536px) {
-    .intro-column {
-        padding-bottom: 25px;
-        padding-top: 0px;
-
-    }
 
 
 }
