@@ -29,6 +29,27 @@ html {
     margin: auto;
 }
 
+.cool-flex-container {
+    width: 93%;
+    max-width: 1290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.cool-flex-container-bottom {
+    margin-top: 30px;
+    width: 93%;
+    max-width: 1290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .apply-illustration {
     display: inline-block;
     float: left;
@@ -67,9 +88,7 @@ html {
 
 .forma-column {
     overflow: hidden;
-    margin-bottom: 40px;
     text-align: left;
-    padding-top: 30px;
 
 }
 
@@ -78,6 +97,17 @@ html {
     margin-bottom: 40px;
     text-align: left;
     padding-top: 60px;
+
+}
+
+.trainer-column {
+    overflow: hidden;
+    text-align: left;
+}
+
+.chatkitty-column {
+    overflow: hidden;
+    text-align: left;
 
 }
 
@@ -107,13 +137,10 @@ html {
 
 .ai-illustration {
     max-width: 500px;
-    margin: auto;
-    margin-bottom: 30px;
 }
 
-.contact-column {
-    padding-top: 20px;
-    padding-bottom: 40px;
+.chat-illustration {
+    max-width: 2000px;
 }
 
 
@@ -134,6 +161,18 @@ html {
 }
 
 @media (min-width: 1024px) {
+    .contact-column {
+        max-width: 550px;
+    }
+    .cool-flex-container {
+        flex-direction: row;
+    }
+
+     .cool-flex-container-bottom {
+         margin-top: 0;
+        flex-direction: row;
+    }
+
     .creative-illustration {
         float: right;
         width: calc(100% - 460px);
@@ -193,11 +232,12 @@ html {
     }
 
     .kevin-illustration {
-        float: right;
-        width: calc(100% - 650px);
         max-width: 400px;
         overflow: hidden;
-        margin-right: 0;
+    }
+
+    .kevin-centerer {
+        width: 600px;
     }
 
     .processor-column {
@@ -232,16 +272,28 @@ html {
 
     .forma-column {
         float: right;
-        max-width: 505px;
-        margin-bottom: 40px;
+        max-width: 600px;
         text-align: left;
 
+    }
+
+    .chatkitty-column {
+        float: right;
+        max-width: 600px;
+        text-align: left;
     }
 
     .indigo-column {
         float: left;
         max-width: 600px;
         margin-bottom: 40px;
+        text-align: left;
+
+    }
+
+    .trainer-column {
+        float: left;
+        max-width: 600px;
         text-align: left;
 
     }
@@ -264,9 +316,7 @@ html {
 
     .commission-illustration {
         float: left;
-        width: calc(100% - 520px);
         max-width: 660px;
-        padding-top: calc(600px - 40%);
     }
 
     .indigo-illustration {
@@ -278,11 +328,14 @@ html {
     }
 
     .ai-illustration {
-        float: right;
-        width: calc(100% - 610px);
         max-width: 420px;
-        margin-right: calc(50% - 550px);
-        padding-top: 30px;
+        margin-left: 30px;
+    }
+
+    .chat-illustration {
+        float: left;
+        max-width: 500px;
+        margin-right: 50px;
     }
 
     .uoft-column {
@@ -296,16 +349,7 @@ html {
     }
 
     .uoft-illustration {
-        float: left;
-        width: calc(100% - 640px);
         max-width: 480px;
-        padding-top: calc(350px - 25%);
-    }
-
-    .contact-column {
-        padding-top: calc(15% - 110px);
-        max-width: 650px;
-        display: inline-block;
     }
 
 }
@@ -323,25 +367,8 @@ html {
         padding-top: 65px;
     }
 
-    .commission-illustration {
-        padding-top: 125px;
-    }
-
     .indigo-illustration {
         padding-top: 30px;
-    }
-
-    .uoft-illustration {
-        padding-top: 60px;
-    }
-    .kevin-illustration {
-        margin-right: 110px;
-    }
-
-    .contact-column {
-        padding-top: 70px;
-        max-width: 650px;
-        display: inline-block;
     }
 
 }

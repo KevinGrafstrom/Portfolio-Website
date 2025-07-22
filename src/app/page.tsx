@@ -115,7 +115,7 @@ export default function Home(): React.ReactElement {
     <div className="overflow-hidden m-auto text-left py-8 bg-blue-950">
       <div className="cool-container">
         <div className="approach-column">
-          <div className="text-6xl sm:text-7xl text-left font-bold text-white pt-2">
+          <div className="text-5xl sm:text-7xl text-left font-bold text-white pt-2">
             An <span className="text-amber-600">Artistic</span> Approach to <span className="text-pink-600">Software Development</span>
           </div>
           <div className="text-2xl text-left pt-8 pb-4 text-white">
@@ -153,7 +153,7 @@ export default function Home(): React.ReactElement {
     <div className="bg-white pt-0 overflow-hidden">
       <div className="cool-container">
         <div className="copilot-column">
-          <div className="text-7xl text-left font-bold pt-8 pb-4 bg-white">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4 bg-white">
             Job Application <span className="text-pink-600">Copilot</span>
           </div>
           <div className="text-2xl text-left pb-4 text-black">
@@ -182,7 +182,7 @@ export default function Home(): React.ReactElement {
     <div className="bg-blue-950 text-white">
       <div className="cool-container">
         <div className="social-column">
-          <div className="text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             Android <span className="text-pink-600">Social</span> Application
           </div>
 
@@ -213,7 +213,7 @@ export default function Home(): React.ReactElement {
       <div className="cool-container">
 
         <div className="budget-column">
-          <div className="text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             Personal <span className="text-pink-600">Finance</span> Analyzer
           </div>
 
@@ -242,7 +242,7 @@ export default function Home(): React.ReactElement {
     <div className="bg-blue-950 text-white">
       <div className="cool-container">
         <div className="web-column">
-          <div className="text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             This <span className="text-pink-600">Portfolio</span> Website
           </div>
 
@@ -267,7 +267,7 @@ export default function Home(): React.ReactElement {
       <div className="cool-container">
 
         <div className="music-column">
-          <div className="text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             <span className="text-pink-600">Music</span> Trends <span
             className="text-pink-600">Prediction</span> Database
             {/*Personal <span className="text-pink-600">Finance</span> Analyzer*/}
@@ -293,7 +293,7 @@ export default function Home(): React.ReactElement {
     <div className="bg-blue-950 text-white overflow-hidden pb-12">
       <div className="cool-container">
         <div className="processor-column">
-          <div className="text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             {/*This <span className="text-pink-600">Portfolio</span> Website*/}
             FPGA <span className="text-pink-600">Processor</span> in Verilog
           </div>
@@ -340,17 +340,56 @@ export default function Home(): React.ReactElement {
     </div>
     {/*bg-blue-950*/}
     <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-container">
+      <div className="cool-flex-container">
 
-        <div className="indigo-column overflow-hidden">
+        <div className="chatkitty-column overflow-hidden lg:order-2">
+
+          <div className={"flex items-center"}>
+            <div className="inline-block" style={{marginLeft: "-10px", marginBottom: "-5px"}}>
+                <Image src="/chatkitty.webp" alt="Grafstrom.dev Logo" width="90" height="0">
+                </Image>
+              </div>
+            <div className="text-6xl inline-block">
+              <b>ChatKitty</b>
+            </div>
+          </div>
+
+          <div className="text-2xl leading-9 text-left mb-7 overflow-hidden">
+            <div className="inline-block float-left mr-4"><b>Full Stack Developer</b></div>
+
+            <div className="indigo-date"><b>March 2025 - Present</b></div>
+
+          </div>
+
+          <div className="text-2xl text-left pb-4 mt-4">
+
+            I ported the ChatKitty application to allow embedding it in all major mobile SDKs and web frameworks.
+            I also implemented a user interface in Vue and a backend in Spring for modifying the chat room membership settings.
+            I added endpoints for asynchronous message delivery using the STOMP protocol while ensuring the accuracy of
+            concurrent database transactions using locks with the Java Persistence API. I created an automated test suite
+            using K6 to verify the functionality of ChatKitty&apos;s real time messaging infrastructure.
+
+          </div>
+        </div>
+
+        <div className="chat-illustration order-1">
+          <Image src="group-chat.svg" alt="Grafstrom.dev Logo" width="1000" height="0">
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-blue-950 text-white overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-flex-container">
+        <div className="trainer-column overflow-hidden">
           <div className="mb-7 mt-0 text-6xl">
             <b>Self Employed</b>
           </div>
 
           <div className="text-2xl leading-9 text-left mb-7 overflow-hidden">
-            <div className="inline-block float-left mr-4"><b>Coding Data Annotator</b></div>
+            <div className="inline-block float-left mr-4"><b>AI Data Trainer</b></div>
 
-            <div className="indigo-date"><b>May 2024 - Present</b></div>
+            <div className="indigo-date"><b>May 2024 - March 2025</b></div>
 
           </div>
 
@@ -366,17 +405,16 @@ export default function Home(): React.ReactElement {
         </div>
 
         <div className="ai-illustration">
-          <Image src="ai training.svg" alt="Grafstrom.dev Logo" width="600" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          <Image src="ai training.svg" alt="Grafstrom.dev Logo" width="600" height="0">
           </Image>
         </div>
       </div>
     </div>
 
-    <div className="bg-blue-950 text-white overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-container">
+    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-flex-container">
 
-        <div className="forma-column overflow-hidden">
+        <div className="forma-column overflow-hidden lg:order-1">
           <div className="mb-4">
             <div className="inline-block" style={{marginLeft: "-10px"}}>
               <Image src="/forma-ai.webp" alt="Grafstrom.dev Logo" width="90" height="0">
@@ -408,20 +446,19 @@ export default function Home(): React.ReactElement {
         </div>
 
         <div className="commission-illustration">
-          <Image src="commission.svg" alt="Grafstrom.dev Logo" width="1100" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          <Image src="commission.svg" alt="Grafstrom.dev Logo" width="1100" height="0">
           </Image>
         </div>
       </div>
     </div>
 
-    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-blue-950 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-container">
 
         <div className="indigo-column overflow-hidden">
           <div className="mb-4 mt-4">
             <div className="inline-block" style={{marginLeft: "0px"}}>
-              <Image src="/indigo-blue.png" alt="Grafstrom.dev Logo" width="180" height="0">
+              <Image src="/indigo.png" alt="Grafstrom.dev Logo" width="180" height="0">
               </Image>
             </div>
           </div>
@@ -471,13 +508,13 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-blue-950 text-white overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-container">
+    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-flex-container">
 
-        <div className="uoft-column">
-          <div className="py-3" style={{marginLeft: "-50px"}}>
+        <div className="uoft-column lg:order-1">
+          <div className="py-3">
             <div className="inline-block">
-              <Image src="/uoft3.png" alt="Grafstrom.dev Logo" width="500" height="0">
+              <Image src="/uoft.png" alt="Grafstrom.dev Logo" width="500" height="0">
               </Image>
             </div>
           </div>
@@ -501,8 +538,7 @@ export default function Home(): React.ReactElement {
         </div>
 
         <div className="uoft-illustration">
-          <Image src="student.svg" alt="Grafstrom.dev Logo" width="1100" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          <Image src="student.svg" alt="Grafstrom.dev Logo" width="1100" height="0">
           </Image>
         </div>
       </div>
@@ -528,24 +564,28 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-white text-black overflow-hidden">
-      <div className="cool-container">
-        <div className="contact-column">
-          <div className="text-7xl text-left font-bold pt-2">
-            Let&apos;s Create the <span className="text-pink-600">Next Big Thing</span>!
-          </div>
+    <div className="bg-blue-950 text-white overflow-hidden">
+      <div className="cool-flex-container-bottom">
+        <div className="contact-column flex items-center">
+          <div style={{height: "max-content"}}>
+            <div className="text-5xl sm:text-7xl text-left font-bold">
+              Let&apos;s Create the <span className="text-pink-600">Next Big Thing</span>!
+            </div>
 
-          <div className="text-2xl text-left pt-8">
+            <div className="text-2xl text-left pt-8">
 
-            You can email me with any inquiries at <Link href="mailto:kevin.grafstrom@gmail.com"
-                                                         className="text-pink-600">kevin.grafstrom@gmail.com</Link>
+              You can email me with any inquiries at <Link href="mailto:kevin.grafstrom@gmail.com"
+                                                           className="text-pink-600">kevin.grafstrom@gmail.com</Link>
 
+            </div>
           </div>
         </div>
 
-        <div className="kevin-illustration">
-          <Image src="/kevin.jpg" alt="Grafstrom.dev Logo" width="800" height="0">
-          </Image>
+        <div className="kevin-centerer flex justify-center">
+          <div className="kevin-illustration">
+            <Image src="/kevin-transparent.png" alt="Grafstrom.dev Logo" width="800" height="0">
+            </Image>
+          </div>
         </div>
       </div>
     </div>
