@@ -167,8 +167,7 @@ export default function Home(): React.ReactElement {
 
         <div className="apply-illustration">
 
-          <Image src="apply.svg" alt="Grafstrom.dev Logo" width="1200" height="0"
-                 style={{marginTop: '0px', marginBottom: "-10px", marginLeft: "-50px"}}>
+          <Image src="apply.svg" alt="Grafstrom.dev Logo" width="1200" height="0">
           </Image>
         </div>
 
