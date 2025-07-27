@@ -394,11 +394,11 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left pb-4 mt-4">
 
-            I compare and evaluate code outputted by AI models on <a href="https://www.dataannotation.tech"
+            I compared and evaluated code outputted by AI models on <a href="https://www.dataannotation.tech"
                                                                         className="text-pink-600">www.dataannotation.tech</a>.
             To verify the accuracy of the
-            AI generated code, I execute it locally. I&apos;ve verified programs written with Python, Angular + TypeScript,
-            and PHP. Then, I write explanations and give ratings for the relative quality of different AI models&apos; coding
+            AI generated code, I executed it locally. I&apos;ve verified programs written with Python, Angular + TypeScript,
+            and PHP. Then, I wrote explanations and gave ratings for the relative quality of different AI models&apos; coding
             outputs.
           </div>
         </div>
