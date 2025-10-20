@@ -13,7 +13,7 @@ export default function ChatKittyPage(): React.ReactElement {
             <Image src="/grafstrom.svg" className="inline-block" alt="Grafstrom.dev Logo" width="200" height="60">
             </Image>
           </div>
-          <div className="font-bold no-underline text-lg sm:text-2xl text-black/60 inline-block float-end py-2">
+          <div className="font-bold no-underline text-lg sm:text-2xl text-black/60 inline-block sm:float-end py-2">
             <Link
               className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
               href="/"
@@ -38,7 +38,7 @@ export default function ChatKittyPage(): React.ReactElement {
       </div>
     </div>
 
-    <div className="overflow-hidden m-auto text-left py-8 bg-blue-950">
+    <div className="overflow-hidden m-auto text-left py-8 pt-16 sm:pt-8 bg-blue-950">
       <div className="cool-container">
         <div className="text-5xl sm:text-7xl text-left font-bold text-white pt-2">
           ChatKitty <span className="text-pink-600">Vue</span> Demo
