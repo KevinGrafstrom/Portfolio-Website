@@ -4,6 +4,18 @@ import {useEffect, useRef} from "react";
 import gsap from 'gsap';
 import Link from "next/link";
 
+// import dynamic from 'next/dynamic';
+//
+// // Dynamically import ChatUi with no SSR
+// const ChatUi = dynamic(() => import('@chatkitty/react').then(mod => ({ default: mod.ChatUi })), {
+//   ssr: false,
+//   loading: () => <div>Loading chat...</div>
+// });
+
+import {ChatUi} from '@chatkitty/react';
+import Script from "next/script";
+import {loadChatUi} from "@chatkitty/core";
+
 // export const metadata: Metadata = {
 //   title: 'Grafstrom.dev',
 // }
@@ -62,33 +74,33 @@ export default function Home(): React.ReactElement {
         <Image src="grafstrom.svg" className="inline-block" alt="Grafstrom.dev Logo" width="200" height="60">
         </Image>
       </div>
-      <div className="font-bold no-underline text-lg sm:text-2xl text-black/60 inline-block float-end py-2">
+      <div className="font-bold no-underline text-lg sm:text-2xl text-black/70 inline-block float-end py-2">
         <Link
-          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/100 hover:ease-in-out focus:text-black/100 active:text-black/100 motion-reduce:transition-none px-2"
           href="#home"
           data-twe-ripple-color="light"
         >Home</Link
         >
-        <Link
-          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
-          href="#projects"
-
-          data-twe-ripple-color="light"
-        >Projects</Link
-        >
         <div className="inline-block"><Link
-          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/100 hover:ease-in-out focus:text-black/100 active:text-black/100 motion-reduce:transition-none px-2"
           href="#work"
           data-twe-ripple-color="light"
         >Work Experience</Link
         ></div>
         <Link
-          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/100 hover:ease-in-out focus:text-black/100 active:text-black/100 motion-reduce:transition-none px-2"
+          href="#projects"
+
+          data-twe-ripple-color="light"
+        >Projects</Link
+        >
+        <Link
+          className="transition duration-200 hover:text-black/100 hover:ease-in-out focus:text-black/100 active:text-black/100 motion-reduce:transition-none px-2"
           href="#education"
           data-twe-ripple-color="light"
         >Education</Link>
         <Link
-          className="transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none px-2"
+          className="transition duration-200 hover:text-black/100 hover:ease-in-out focus:text-black/100 active:text-black/100 motion-reduce:transition-none px-2"
           href="#contact"
           data-twe-ripple-color="light"
         >Contact</Link>
@@ -97,11 +109,11 @@ export default function Home(): React.ReactElement {
   )
 
   return (
-    <html className="bg-blue-950">
+    <html className="bg-blue-950 bg-gradient-to-br from-blue-950 to-blue-600">
     <body>
 
     <header>
-      <div className="bg-slate-100 fixed w-screen z-10">
+      <div className="bg-gradient-to-br from-slate-100 to-slate-400 fixed w-screen z-10">
         {headerContainer}
       </div>
 
@@ -112,7 +124,7 @@ export default function Home(): React.ReactElement {
     </div>
 
 
-    <div className="overflow-hidden m-auto text-left py-8 bg-blue-950">
+    <div className="overflow-hidden m-auto text-left py-8 bg-gradient-to-br from-blue-950 to-blue-700">
       <div className="cool-container">
         <div className="approach-column">
           <div className="text-5xl sm:text-7xl text-left font-bold text-white pt-2">
@@ -131,193 +143,9 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div id="projects" className="relative" style={{bottom: "60px"}}></div>
-
-
-    <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
-      <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
-           ref={firstText}>👇🏻Recent Projects👇🏻
-      </div>
-      <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
-           style={{bottom: "96px"}} ref={secondText}>👇🏻Recent Projects👇🏻
-      </div>
-      <div className="whitespace-nowrap block sm:block md:block lg:blo  ck xl:hidden 2xl:hidden"
-           ref={thirdText}>Projects
-      </div>
-      <div className="relative whitespace-nowrap block sm:block md:block lg:block xl:hidden 2xl:hidden"
-           style={{bottom: "96px"}} ref={fourthText}>Projects
-      </div>
-    </div>
-
-
-    <div className="bg-white pt-0 overflow-hidden">
-      <div className="cool-container">
-        <div className="copilot-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4 bg-white">
-            Job Application <span className="text-pink-600">Copilot</span>
-          </div>
-          <div className="text-2xl text-left pb-4 text-black">
-
-            I wrote a Python program using Selenium to automatically fill out job application forms. I still choose the
-            jobs I apply to very carefully, verify everything, and enter the creative parts
-            manually.
-
-          </div>
-        </div>
-
-        <div className="apply-illustration">
-
-          <Image src="apply.svg" alt="Grafstrom.dev Logo" width="1200" height="0">
-          </Image>
-        </div>
-
-        <video width="1920" height="1080" controls preload="metadata">
-          <source src="copilot.mp4#t=0.001" type="video/mp4"></source>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-
-    <div className="bg-blue-950 text-white">
-      <div className="cool-container">
-        <div className="social-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
-            Android <span className="text-pink-600">Social</span> Application
-          </div>
-
-          <div className="text-2xl text-left pb-4 pt-8">
-
-            A friend and I developed an Android social application for meeting people closest in proximity. It features
-            in-app
-            messaging, location sharing, and face verification using a machine learning model. In the process, we used
-            Spring Boot, PostgreSQL, the Google Maps API, and ML Kit.
-
-          </div>
-        </div>
-
-        <div className="social-illustration">
-          <Image src="social.svg" alt="Grafstrom.dev Logo" width="800" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
-          </Image>
-        </div>
-
-        <video width="1920" height="1080" controls preload="metadata">
-          <source src="quick-meet.mp4#t=0.001" type="video/mp4"></source>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-
-    <div className="bg-white text-black">
-      <div className="cool-container">
-
-        <div className="budget-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
-            Personal <span className="text-pink-600">Finance</span> Analyzer
-          </div>
-
-          <div className="text-2xl text-left pb-4">
-
-            I wrote a program to parse transaction csv files from CIBC using Pandas.
-            I exported the Pandas data frames into a PostgreSQL database. Then
-            I created views to group the transactions into categories and calculate a total for each category.
-
-          </div>
-        </div>
-
-        <div className="budget-illustration">
-          <Image src="budget.svg" alt="Grafstrom.dev Logo" width="1000" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
-          </Image>
-        </div>
-
-        <video width="1920" height="1080" controls preload="metadata">
-          <source src="analyzer.mp4#t=0.001" type="video/mp4"></source>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-
-    <div className="bg-blue-950 text-white">
-      <div className="cool-container">
-        <div className="web-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
-            This <span className="text-pink-600">Portfolio</span> Website
-          </div>
-
-          <div className="text-2xl text-left pb-4 pt-8">
-
-            Other than the stock images, which I got from stockphotos.com and have a license to use, I created this
-            website
-            entirely by myself using Next.js, React, Tailwind CSS, TypeScript, and NGINX.
-
-          </div>
-        </div>
-
-        <div className="web-illustration">
-          <Image src="web.svg" alt="Grafstrom.dev Logo" width="800" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
-          </Image>
-        </div>
-      </div>
-    </div>
-
-    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-container">
-
-        <div className="music-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
-            <span className="text-pink-600">Music</span> Trends <span
-            className="text-pink-600">Prediction</span> Database
-            {/*Personal <span className="text-pink-600">Finance</span> Analyzer*/}
-          </div>
-
-          <div className="text-2xl text-left pb-4">
-
-            A friend and I queried the Spotify API to transfer data for the most popular artists into a PostgreSQL
-            database.
-            We used linear regression to determine the fastest growing artists and genres.
-
-          </div>
-        </div>
-
-        <div className="music-illustration">
-          <Image src="music.svg" alt="Grafstrom.dev Logo" width="1000" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
-          </Image>
-        </div>
-      </div>
-    </div>
-
-    <div className="bg-blue-950 text-white overflow-hidden pb-12">
-      <div className="cool-container">
-        <div className="processor-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
-            {/*This <span className="text-pink-600">Portfolio</span> Website*/}
-            FPGA <span className="text-pink-600">Processor</span> in Verilog
-          </div>
-
-          <div className="text-2xl text-left pt-8 mb-10 lg:mb-0">
-
-            In a computer hardware course I took at U of T, there was a competition that involved
-            implementing a processor on an FPGA using Verilog. Designs were ranked by the number of assembly
-            instructions they completed per second.
-            My teammate and I scored second place, which gave us a bonus 4.5% on each of our final grades.
-
-          </div>
-        </div>
-
-        <div className="processor-illustration">
-          <Image src="processor.svg" alt="Grafstrom.dev Logo" width="800" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
-          </Image>
-        </div>
-      </div>
-    </div>
-
     <div id="work" className="relative" style={{bottom: "60px"}}></div>
 
-    <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
+    <div className="text-8xl text-center bg-gradient-to-br from-slate-900 to-blue-950 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
            ref={fifthText}>👇🏻Work Experience👇🏻
       </div>
@@ -338,14 +166,14 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
     {/*bg-blue-950*/}
-    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container">
 
         <div className="chatkitty-column overflow-hidden lg:order-2">
 
           <div className={"flex items-center"}>
-            <div className="inline-block" style={{marginLeft: "-10px", marginBottom: "-5px"}}>
-                <Image src="/chatkitty.webp" alt="Grafstrom.dev Logo" width="90" height="0">
+            <div className="inline-block" style={{marginRight: "5px"}}>
+                <Image src="/chatkitty.webp" alt="Grafstrom.dev Logo" width="80" height="0">
                 </Image>
               </div>
             <div className="text-6xl inline-block">
@@ -375,10 +203,46 @@ export default function Home(): React.ReactElement {
           <Image src="group-chat.svg" alt="Grafstrom.dev Logo" width="1000" height="0">
           </Image>
         </div>
+
+      </div>
+      <Script src='https://cdn.chatkitty.com/lib.js'></Script>
+      <div className="w-[93%] max-w-[1290px] h-[410px] mx-auto mb-12 overflow-hidden">
+        <div id='chat-ui'></div>
+      </div>
+      <Script type="module" id={"load-chat"}>
+      {`
+        const {loadChatUi} = ChatKitty
+    
+        loadChatUi(
+          {
+            widgetId: 'VT5zadmDlQ7WIAez',
+            username: "Kevin Grafstrom",
+            container: {
+              height: '100%',
+              width: '100%',
+              responsive: {
+                small: {
+                  breakpoint: 300
+                }
+              }
+            }
+          },
+          {
+            mode: 'sandbox'
+          }
+        );
+      `}
+      </Script>
+
+      <div className="cool-container">
+        <video width="1920" height="1080" controls preload="metadata">
+          <source src="chatkitty-vue-demo.mp4#t=0.001" type="video/mp4"></source>
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
 
-    <div className="bg-blue-950 text-white overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container">
         <div className="trainer-column overflow-hidden">
           <div className="mb-7 mt-0 text-6xl">
@@ -410,7 +274,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container">
 
         <div className="forma-column overflow-hidden lg:order-1">
@@ -451,7 +315,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-blue-950 text-white overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-container">
 
         <div className="indigo-column overflow-hidden">
@@ -487,9 +351,193 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
+    <div id="projects" className="relative" style={{bottom: "60px"}}></div>
+
+
+    <div className="text-8xl text-center bg-gradient-to-br from-slate-900 to-blue-950 text-white font-bold overflow-hidden h-32 pt-2">
+      <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+           ref={firstText}>👇🏻Recent Projects👇🏻
+      </div>
+      <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+           style={{bottom: "96px"}} ref={secondText}>👇🏻Recent Projects👇🏻
+      </div>
+      <div className="whitespace-nowrap block sm:block md:block lg:blo  ck xl:hidden 2xl:hidden"
+           ref={thirdText}>Projects
+      </div>
+      <div className="relative whitespace-nowrap block sm:block md:block lg:block xl:hidden 2xl:hidden"
+           style={{bottom: "96px"}} ref={fourthText}>Projects
+      </div>
+    </div>
+
+
+    <div className="bg-gradient-to-br from-white to-blue-200 pt-0 overflow-hidden">
+      <div className="cool-container">
+        <div className="copilot-column">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+            Job Application <span className="text-pink-600">Copilot</span>
+          </div>
+          <div className="text-2xl text-left pb-4 text-black">
+
+            I wrote a Python program using Selenium to automatically fill out job application forms. I still choose the
+            jobs I apply to very carefully, verify everything, and enter the creative parts
+            manually.
+
+          </div>
+        </div>
+
+        <div className="apply-illustration">
+
+          <Image src="apply.svg" alt="Grafstrom.dev Logo" width="1200" height="0">
+          </Image>
+        </div>
+
+        <video width="1920" height="1080" controls preload="metadata">
+          <source src="copilot.mp4#t=0.001" type="video/mp4"></source>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white">
+      <div className="cool-container">
+        <div className="social-column">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+            Android <span className="text-pink-600">Social</span> Application
+          </div>
+
+          <div className="text-2xl text-left pb-4 pt-8">
+
+            A friend and I developed an Android social application for meeting people closest in proximity. It features
+            in-app
+            messaging, location sharing, and face verification using a machine learning model. In the process, we used
+            Spring Boot, PostgreSQL, the Google Maps API, and ML Kit.
+
+          </div>
+        </div>
+
+        <div className="social-illustration">
+          <Image src="social.svg" alt="Grafstrom.dev Logo" width="800" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+
+        <video width="1920" height="1080" controls preload="metadata">
+          <source src="quick-meet.mp4#t=0.001" type="video/mp4"></source>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black">
+      <div className="cool-container">
+
+        <div className="budget-column">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+            Personal <span className="text-pink-600">Finance</span> Analyzer
+          </div>
+
+          <div className="text-2xl text-left pb-4">
+
+            I wrote a program to parse transaction csv files from CIBC using Pandas.
+            I exported the Pandas data frames into a PostgreSQL database. Then
+            I created views to group the transactions into categories and calculate a total for each category.
+
+          </div>
+        </div>
+
+        <div className="budget-illustration">
+          <Image src="budget.svg" alt="Grafstrom.dev Logo" width="1000" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+
+        <video width="1920" height="1080" controls preload="metadata">
+          <source src="analyzer.mp4#t=0.001" type="video/mp4"></source>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white">
+      <div className="cool-container">
+        <div className="web-column">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+            This <span className="text-pink-600">Portfolio</span> Website
+          </div>
+
+          <div className="text-2xl text-left pb-4 pt-8">
+
+            Other than the stock images, which I got from stockphotos.com and have a license to use, I created this
+            website
+            entirely by myself using Next.js, React, Tailwind CSS, TypeScript, and NGINX.
+
+          </div>
+        </div>
+
+        <div className="web-illustration">
+          <Image src="web.svg" alt="Grafstrom.dev Logo" width="800" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-container">
+
+        <div className="music-column">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+            <span className="text-pink-600">Music</span> Trends <span
+            className="text-pink-600">Prediction</span> Database
+            {/*Personal <span className="text-pink-600">Finance</span> Analyzer*/}
+          </div>
+
+          <div className="text-2xl text-left pb-4">
+
+            A friend and I queried the Spotify API to transfer data for the most popular artists into a PostgreSQL
+            database.
+            We used linear regression to determine the fastest growing artists and genres.
+
+          </div>
+        </div>
+
+        <div className="music-illustration">
+          <Image src="music.svg" alt="Grafstrom.dev Logo" width="1000" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden pb-12">
+      <div className="cool-container">
+        <div className="processor-column">
+          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+            {/*This <span className="text-pink-600">Portfolio</span> Website*/}
+            FPGA <span className="text-pink-600">Processor</span> in Verilog
+          </div>
+
+          <div className="text-2xl text-left pt-8 mb-10 lg:mb-0">
+
+            In a computer hardware course I took at U of T, there was a competition that involved
+            implementing a processor on an FPGA using Verilog. Designs were ranked by the number of assembly
+            instructions they completed per second.
+            My teammate and I scored second place, which gave us a bonus 4.5% on each of our final grades.
+
+          </div>
+        </div>
+
+        <div className="processor-illustration">
+          <Image src="processor.svg" alt="Grafstrom.dev Logo" width="800" height="0"
+                 style={{marginTop: '0px', marginBottom: "10px"}}>
+          </Image>
+        </div>
+      </div>
+    </div>
+
     <div id="education" className="relative" style={{bottom: "60px"}}></div>
 
-    <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
+    <div className="text-8xl text-center bg-gradient-to-br from-slate-900 to-blue-950 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:block xl:block 2xl:block"
            ref={eleventhText}>👇🏻Education👇🏻
       </div>
@@ -507,7 +555,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-white text-black overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container">
 
         <div className="uoft-column lg:order-1">
@@ -545,7 +593,7 @@ export default function Home(): React.ReactElement {
 
     <div id="contact" className="relative" style={{bottom: "60px"}}></div>
 
-    <div className="text-8xl text-center bg-slate-900 text-white font-bold overflow-hidden h-32 pt-2">
+    <div className="text-8xl text-center bg-gradient-to-br from-slate-900 to-blue-950 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:block xl:block 2xl:block"
            ref={sixteenthText}>👇🏻Contact👇🏻
       </div>
@@ -563,7 +611,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-blue-950 text-white overflow-hidden">
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden">
       <div className="cool-flex-container-bottom">
         <div className="contact-column flex items-center">
           <div style={{height: "max-content"}}>
