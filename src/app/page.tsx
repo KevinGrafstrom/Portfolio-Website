@@ -223,26 +223,36 @@ export default function Home(): React.ReactElement {
       </div>
       <Script type="module" id={"load-chat"}>
       {`
-        const {loadChatUi} = ChatKitty
-    
-        loadChatUi(
-          {
-            widgetId: 'VT5zadmDlQ7WIAez',
-            username: "Kevin Grafstrom",
-            container: {
-              height: '100%',
-              width: '100%',
-              responsive: {
-                small: {
-                  breakpoint: 300
+        function initializeChatKitty() {
+          if (typeof ChatKitty !== 'undefined' && ChatKitty.loadChatUi) {
+            const {loadChatUi} = ChatKitty;
+            
+            loadChatUi(
+              {
+                widgetId: 'VT5zadmDlQ7WIAez',
+                username: "Kevin Grafstrom",
+                container: {
+                  height: '100%',
+                  width: '100%',
+                  responsive: {
+                    small: {
+                      breakpoint: 300
+                    }
+                  }
                 }
+              },
+              {
+                mode: 'sandbox'
               }
-            }
-          },
-          {
-            mode: 'sandbox'
+            );
+          } else {
+            // ChatKitty not ready yet, try again in 100ms
+            setTimeout(initializeChatKitty, 100);
           }
-        );
+        }
+        
+        initializeChatKitty();
+
       `}
       </Script>
 
