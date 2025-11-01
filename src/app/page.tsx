@@ -4,17 +4,7 @@ import {useEffect, useRef} from "react";
 import gsap from 'gsap';
 import Link from "next/link";
 
-// import dynamic from 'next/dynamic';
-//
-// // Dynamically import ChatUi with no SSR
-// const ChatUi = dynamic(() => import('@chatkitty/react').then(mod => ({ default: mod.ChatUi })), {
-//   ssr: false,
-//   loading: () => <div>Loading chat...</div>
-// });
-
-import {ChatUi} from '@chatkitty/react';
 import Script from "next/script";
-import {loadChatUi} from "@chatkitty/core";
 
 // export const metadata: Metadata = {
 //   title: 'Grafstrom.dev',
