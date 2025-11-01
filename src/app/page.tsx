@@ -195,8 +195,30 @@ export default function Home(): React.ReactElement {
         </div>
 
       </div>
+
+      <Script type="module" id={"hybrid-scroll-block"}>
+      {`
+        // Temporarily lock body scroll during chat initialization
+        const originalOverflow = document.body.style.overflow;
+        const originalPosition = document.body.style.position;
+        
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+      
+        // Restore after chat loads
+        setTimeout(() => {
+          document.body.style.overflow = originalOverflow;
+          document.body.style.position = originalPosition;
+          document.body.style.width = '';
+        }, 2000);
+      `}
+      </Script>
+
+
+
       <Script src='https://cdn.chatkitty.com/lib.js'></Script>
-      <div className="w-[93%] max-w-[1290px] h-[410px] mx-auto mb-12 overflow-hidden">
+      <div className="w-[93%] max-w-[1290px] h-[420px] mx-auto mb-12 overflow-hidden chat-scroll-container">
         <div id='chat-ui'></div>
       </div>
       <Script type="module" id={"load-chat"}>

@@ -143,6 +143,11 @@ html {
     max-width: 2000px;
 }
 
+.chat-scroll-container {
+  overscroll-behavior: none;
+    scroll-behavior: none;
+}
+
 
 @media (min-width: 640px) {
     .indigo-date {
