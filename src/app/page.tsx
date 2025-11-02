@@ -211,7 +211,7 @@ export default function Home(): React.ReactElement {
           document.body.style.overflow = originalOverflow;
           document.body.style.position = originalPosition;
           document.body.style.width = '';
-        }, 20000);
+        }, 3000);
       `}
       </Script>
 
