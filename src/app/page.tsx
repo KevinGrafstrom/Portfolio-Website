@@ -114,11 +114,11 @@ export default function Home(): React.ReactElement {
     </div>
 
 
-    <div className="overflow-hidden m-auto text-left py-8 bg-gradient-to-br from-blue-950 to-blue-700">
+    <div className="overflow-hidden m-auto text-left py-8 bg-gradient-to-r from-blue-950 to-blue-700">
       <div className="cool-container">
         <div className="approach-column">
           <div className="text-5xl sm:text-7xl text-left font-bold text-white pt-2">
-            An <span className="text-amber-600">Artistic</span> Approach to <span className="text-pink-600">Software Development</span>
+            An <span className="bg-gradient-to-br from-yellow-400 via-amber-600 to-orange-600 bg-clip-text text-transparent">Artistic</span> Approach to <span className="bg-gradient-to-br from-pink-300 via-rose-500 to-orange-600 bg-clip-text text-transparent">Software Development</span>
           </div>
           <div className="text-2xl text-left pt-8 pb-4 text-white">
             My name is <span className="text-pink-600">Kevin Grafstrom</span>. I combine my experience studying computer
@@ -137,7 +137,7 @@ export default function Home(): React.ReactElement {
 
     <div className="text-8xl text-center bg-gradient-to-br from-slate-900 to-blue-950 text-white font-bold overflow-hidden h-32 pt-2">
       <div className="whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
-           ref={fifthText}>👇🏻Work Experience👇🏻
+           ref={fifthText}>👇🏻<span className={""}>Work Experience</span>👇🏻
       </div>
       <div className="relative whitespace-nowrap hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
            style={{bottom: "96px"}} ref={sixthText}>👇🏻Work Experience👇🏻
@@ -638,7 +638,7 @@ export default function Home(): React.ReactElement {
         <div className="contact-column flex items-center">
           <div style={{height: "max-content"}}>
             <div className="text-5xl sm:text-7xl text-left font-bold">
-              Let&apos;s Create the <span className="text-pink-600">Next Big Thing</span>!
+              Let&apos;s Create the <span className="bg-gradient-to-br from-yellow-400 via-amber-600 to-orange-600 bg-clip-text text-transparent">Next Big Thing</span>!
             </div>
 
             <div className="text-2xl text-left pt-8">
