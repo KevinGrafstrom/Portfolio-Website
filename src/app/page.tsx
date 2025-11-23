@@ -300,12 +300,12 @@ export default function Home(): React.ReactElement {
       <div className="cool-flex-container">
 
         <div className="forma-column overflow-hidden lg:order-1">
-          <div className="mb-4">
+          <div className="mb-4 flex items-center">
             <div className="inline-block" style={{marginLeft: "-10px"}}>
               <Image src="/forma-ai.webp" alt="Grafstrom.dev Logo" width="90" height="0">
               </Image>
             </div>
-            <div className="text-6xl text-left font-bold inline-block overflow-hidden pb-4 pl-2">
+            <div className="text-6xl text-left font-bold inline-block overflow-hidden pl-2">
               FORMA.AI
             </div>
           </div>
