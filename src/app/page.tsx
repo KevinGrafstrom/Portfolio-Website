@@ -298,8 +298,40 @@ export default function Home(): React.ReactElement {
 
     <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container">
+        <div className="trainer-column overflow-hidden lg:order-1">
+          <div className="mb-7 mt-0 text-6xl">
+            <b>Self Employed</b>
+          </div>
 
-        <div className="forma-column overflow-hidden lg:order-1">
+          <div className="text-2xl leading-9 text-left mb-7 overflow-hidden">
+            <div className="inline-block float-left mr-4"><b>AI Data Trainer</b></div>
+
+            <div className="indigo-date"><b>May 2024 - March 2025</b></div>
+
+          </div>
+
+          <div className="text-2xl text-left pb-4 mt-4">
+
+            I compared and evaluated code outputted by AI models on <a href="https://www.dataannotation.tech"
+                                                                        className="text-pink-600">www.dataannotation.tech</a>.
+            To verify the accuracy of the
+            AI generated code, I executed it locally. I&apos;ve verified programs written with Python, Angular + TypeScript,
+            and PHP. Then, I wrote explanations and gave ratings for the relative quality of different AI models&apos; coding
+            outputs.
+          </div>
+        </div>
+
+        <div className="ai-illustration">
+          <Image src="ai training.svg" alt="Grafstrom.dev Logo" width="600" height="0">
+          </Image>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-flex-container">
+
+        <div className="forma-column overflow-hidden">
           <div className="mb-4 flex items-center">
             <div className="inline-block w-16 sm:w-20">
               <Image src="/forma-ai.webp" alt="Grafstrom.dev Logo" width="90" height="0">
@@ -337,13 +369,13 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-container">
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-flex-container">
 
-        <div className="indigo-column overflow-hidden">
+        <div className="lg:w-[600px] overflow-hidden lg:order-1">
           <div className="mb-4 mt-4">
             <div className="inline-block" style={{marginLeft: "0px"}}>
-              <Image src="/indigo.png" alt="Grafstrom.dev Logo" width="180" height="0">
+              <Image src="/indigo-blue.png" alt="Grafstrom.dev Logo" width="180" height="0">
               </Image>
             </div>
           </div>
@@ -365,9 +397,8 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="indigo-illustration">
-          <Image src="books.svg" alt="Grafstrom.dev Logo" width="600" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
+        <div className="">
+          <Image src="books.svg" alt="Grafstrom.dev Logo" width="350" height="0">
           </Image>
         </div>
       </div>
@@ -392,13 +423,13 @@ export default function Home(): React.ReactElement {
     </div>
 
 
-    <div className="bg-gradient-to-br from-white to-blue-200 pt-0 overflow-hidden">
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white pt-0 overflow-hidden">
       <div className="cool-container">
         <div className="copilot-column">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             Job Application <span className="text-pink-600">Copilot</span>
           </div>
-          <div className="text-2xl text-left pb-4 text-black">
+          <div className="text-2xl text-left pb-4">
 
             I wrote a Python program using Selenium to automatically fill out job application forms. I still choose the
             jobs I apply to very carefully, verify everything, and enter the creative parts
@@ -420,7 +451,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white">
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black">
       <div className="cool-container">
         <div className="social-column">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
@@ -450,7 +481,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-white to-blue-200 text-black">
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white">
       <div className="cool-container">
 
         <div className="budget-column">
@@ -480,9 +511,11 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white">
-      <div className="cool-container">
-        <div className="web-column">
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black">
+
+      <div className="cool-flex-container">
+
+        <div className="lg:w-[600px]">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             This <span className="text-pink-600">Portfolio</span> Website
           </div>
@@ -496,7 +529,7 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="web-illustration">
+        <div className="">
           <Image src="web.svg" alt="Grafstrom.dev Logo" width="800" height="0"
                  style={{marginTop: '0px', marginBottom: "10px"}}>
           </Image>
@@ -504,7 +537,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-container">
 
         <div className="music-column">
@@ -531,7 +564,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden pb-12">
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden pb-12">
       <div className="cool-container">
         <div className="processor-column">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
@@ -577,13 +610,13 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container">
 
         <div className="uoft-column lg:order-1">
           <div className="py-3">
-            <div className="inline-block">
-              <Image src="/uoft.png" alt="Grafstrom.dev Logo" width="500" height="0">
+            <div className="inline-block ml-[-35px]">
+              <Image src="/uoft3.png" alt="Grafstrom.dev Logo" width="400" height="0">
               </Image>
             </div>
           </div>
@@ -633,7 +666,7 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden">
+    <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden">
       <div className="cool-flex-container-bottom">
         <div className="contact-column flex items-center">
           <div style={{height: "max-content"}}>
