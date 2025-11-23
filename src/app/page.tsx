@@ -301,7 +301,7 @@ export default function Home(): React.ReactElement {
 
         <div className="forma-column overflow-hidden lg:order-1">
           <div className="mb-4 flex items-center">
-            <div className="inline-block" style={{marginLeft: "-10px"}}>
+            <div className="inline-block w-16 sm:w-20">
               <Image src="/forma-ai.webp" alt="Grafstrom.dev Logo" width="90" height="0">
               </Image>
             </div>
