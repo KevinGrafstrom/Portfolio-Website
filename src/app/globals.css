@@ -37,7 +37,6 @@ html {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 20px 0;
 }
 
 .cool-flex-container-bottom {
@@ -49,13 +48,6 @@ html {
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
-}
-
-.apply-illustration {
-    display: inline-block;
-    float: left;
-    overflow: hidden;
-    margin-bottom: 10px;
 }
 
 .copilot-column {
@@ -148,6 +140,11 @@ html {
   overscroll-behavior: none;
     scroll-behavior: none;
 }
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
 
 
 @media (min-width: 640px) {
@@ -259,14 +256,6 @@ html {
         float: right;
         max-width: 550px;
 
-    }
-
-    .budget-illustration {
-        float: left;
-        width: calc(100% - 600px);
-        max-width: 570px;
-        margin-right: 50px;
-        padding-top: calc(380px - 30%);
     }
 
     .music-column {

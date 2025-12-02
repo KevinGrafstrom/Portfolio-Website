@@ -157,11 +157,11 @@ export default function Home(): React.ReactElement {
     </div>
     {/*bg-blue-950*/}
     <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-14 pb-14">
 
         <div className="chatkitty-column overflow-hidden lg:order-2">
 
-          <div className={"flex items-center"}>
+          <div className={"flex items-center cursor-pointer mb-5"} onClick={() => window.open('https://chatkitty.com', '_blank')}>
             <div className="inline-block" style={{marginRight: "5px"}}>
                 <Image src="/chatkitty.webp" alt="Grafstrom.dev Logo" width="80" height="0">
                 </Image>
@@ -189,7 +189,7 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="chat-illustration order-1">
+        <div className="chat-illustration order-1 cursor-pointer" onClick={() => window.open('https://chatkitty.com', '_blank')}>
           <Image src="group-chat.svg" alt="Grafstrom.dev Logo" width="1000" height="0">
           </Image>
         </div>
@@ -258,48 +258,59 @@ export default function Home(): React.ReactElement {
 
       <div className="cool-container">
         <video width="1920" height="1080" controls preload="metadata">
-          <source src="chatkitty-vue-demo.mp4#t=0.001" type="video/mp4"></source>
+          <source src="/chatkitty-vue-demo-hq.mp4#t=0.001" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
 
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-flex-container">
-        <div className="trainer-column overflow-hidden">
+      <div className="cool-flex-container pt-10 pb-5">
+        <div className="lg:max-w-[600px] overflow-hidden">
           <div className="mb-7 mt-0 text-6xl">
-            <b>Self Employed</b>
+            <div className={"bg-gradient-to-br from-white to-blue-200 w-[350px] h-30 rounded-2xl p-5 cursor-pointer"} onClick={() => window.open('https://cargenie.co', '_blank')}>
+              <div className={"mt-[-20px]"}>
+              <Image src="/cargenie logo.png" alt="Grafstrom.dev Logo" width="300" height="0"/>
+            </div>
+            </div>
           </div>
 
           <div className="text-2xl leading-9 text-left mb-7 overflow-hidden">
-            <div className="inline-block float-left mr-4"><b>AI Data Trainer</b></div>
+            <div className="inline-block float-left mr-4"><b>Full Stack Developer</b></div>
 
-            <div className="indigo-date"><b>May 2024 - March 2025</b></div>
+            <div className="indigo-date"><b>October 2025 - Present</b></div>
 
           </div>
 
-          <div className="text-2xl text-left pb-4 mt-4">
+          <div className="text-2xl text-left pb-4 mt-4 mb-10 lg:mb-0">
 
-            I compared and evaluated code outputted by AI models on <a href="https://www.dataannotation.tech"
-                                                                        className="text-pink-600">www.dataannotation.tech</a>.
-            To verify the accuracy of the
-            AI generated code, I executed it locally. I&apos;ve verified programs written with Python, Angular + TypeScript,
-            and PHP. Then, I wrote explanations and gave ratings for the relative quality of different AI models&apos; coding
-            outputs.
+            I implemented the full data pipeline for downloading up to date car dealership inventory information and processing it
+            so that CarGenie directs users to relevant car listings. I fine tuned the system instructions and prompts to the
+            OpenAI model so that the user receives the most helpful car recommendations possible. I implemented asynchronous tasks
+            to classify available cars so that they can be considered properly when recommendations are made to the user.
           </div>
         </div>
 
-        <div className="ai-illustration">
-          <Image src="ai training.svg" alt="Grafstrom.dev Logo" width="600" height="0">
+        <div className="cursor-pointer rounded-full overflow-hidden lg:max-w-[650px]" onClick={() => window.open('https://cargenie.co', '_blank')}>
+          <Image src="/cargenie cover.png" alt="Grafstrom.dev Logo" width="800" height="0">
           </Image>
         </div>
+      </div>
+
+      <div className="cool-flex-container pt-10 pb-10">
+        <iframe
+          src="https://cargenie.co"
+          width="100%"
+          height="400"
+          title="Example Website"
+        />
       </div>
     </div>
 
     <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-10 pb-10">
         <div className="trainer-column overflow-hidden lg:order-1">
-          <div className="mb-7 mt-0 text-6xl">
+          <div className="mb-7 mt-0 text-6xl cursor-pointer" onClick={() => window.open('https://www.dataannotation.tech/coders', '_blank')}>
             <b>Self Employed</b>
           </div>
 
@@ -321,7 +332,7 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="ai-illustration">
+        <div className="ai-illustration cursor-pointer" onClick={() => window.open('https://www.dataannotation.tech/coders', '_blank')}>
           <Image src="ai training.svg" alt="Grafstrom.dev Logo" width="600" height="0">
           </Image>
         </div>
@@ -329,10 +340,10 @@ export default function Home(): React.ReactElement {
     </div>
 
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-16 pb-16">
 
         <div className="forma-column overflow-hidden">
-          <div className="mb-4 flex items-center">
+          <div className="mb-4 flex items-center cursor-pointer" onClick={() => window.open('https://forma.ai', '_blank')}>
             <div className="inline-block w-16 sm:w-20">
               <Image src="/forma-ai.webp" alt="Grafstrom.dev Logo" width="90" height="0">
               </Image>
@@ -362,8 +373,8 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="commission-illustration">
-          <Image src="commission.svg" alt="Grafstrom.dev Logo" width="1100" height="0">
+        <div className="commission-illustration cursor-pointer">
+          <Image src="commission.svg" alt="Grafstrom.dev Logo" width="1100" height="0" onClick={() => window.open('https://forma.ai', '_blank')}>
           </Image>
         </div>
       </div>
@@ -373,7 +384,7 @@ export default function Home(): React.ReactElement {
       <div className="cool-flex-container">
 
         <div className="lg:w-[600px] overflow-hidden lg:order-1">
-          <div className="mb-4 mt-4">
+          <div className="mb-4 mt-4 cursor-pointer" onClick={() => window.open('https://indigo.ca', '_blank')}>
             <div className="inline-block" style={{marginLeft: "0px"}}>
               <Image src="/indigo-blue.png" alt="Grafstrom.dev Logo" width="180" height="0">
               </Image>
@@ -397,7 +408,7 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="">
+        <div className="cursor-pointer" onClick={() => window.open('https://indigo.ca', '_blank')}>
           <Image src="books.svg" alt="Grafstrom.dev Logo" width="350" height="0">
           </Image>
         </div>
@@ -424,12 +435,12 @@ export default function Home(): React.ReactElement {
 
 
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white pt-0 overflow-hidden">
-      <div className="cool-container">
+      <div className="cool-flex-container">
         <div className="copilot-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pb-4">
             Job Application <span className="text-pink-600">Copilot</span>
           </div>
-          <div className="text-2xl text-left pb-4">
+          <div className="text-2xl text-left">
 
             I wrote a Python program using Selenium to automatically fill out job application forms. I still choose the
             jobs I apply to very carefully, verify everything, and enter the creative parts
@@ -438,22 +449,22 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="apply-illustration">
-
+        <div>
           <Image src="apply.svg" alt="Grafstrom.dev Logo" width="1200" height="0">
           </Image>
         </div>
-
+      </div>
+      <div className={"cool-flex-container"}>
         <video width="1920" height="1080" controls preload="metadata">
-          <source src="copilot.mp4#t=0.001" type="video/mp4"></source>
+          <source src="/copilot.mp4#t=0.001" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
 
     <div className="bg-gradient-to-br from-white to-blue-200 text-black">
-      <div className="cool-container">
-        <div className="social-column">
+      <div className="cool-flex-container">
+        <div className="social-column lg:order-1">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             Android <span className="text-pink-600">Social</span> Application
           </div>
@@ -469,20 +480,21 @@ export default function Home(): React.ReactElement {
         </div>
 
         <div className="social-illustration">
-          <Image src="social.svg" alt="Grafstrom.dev Logo" width="800" height="0"
+          <Image className={"flip-horizontal"} src="social.svg" alt="Grafstrom.dev Logo" width="800" height="0"
                  style={{marginTop: '0px', marginBottom: "10px"}}>
           </Image>
         </div>
-
+      </div>
+      <div className={"cool-flex-container"}>
         <video width="1920" height="1080" controls preload="metadata">
-          <source src="quick-meet.mp4#t=0.001" type="video/mp4"></source>
+          <source src="/quick-meet.mp4#t=0.001" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
 
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white">
-      <div className="cool-container">
+      <div className="cool-flex-container">
 
         <div className="budget-column">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
@@ -498,14 +510,16 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="budget-illustration">
+        <div>
           <Image src="budget.svg" alt="Grafstrom.dev Logo" width="1000" height="0"
                  style={{marginTop: '0px', marginBottom: "10px"}}>
           </Image>
         </div>
+      </div>
+      <div className="cool-flex-container">
 
         <video width="1920" height="1080" controls preload="metadata">
-          <source src="analyzer.mp4#t=0.001" type="video/mp4"></source>
+          <source src="/analyzer.mp4#t=0.001" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
@@ -513,9 +527,9 @@ export default function Home(): React.ReactElement {
 
     <div className="bg-gradient-to-br from-white to-blue-200 text-black">
 
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-10 pb-10">
 
-        <div className="lg:w-[600px]">
+        <div className="lg:w-[600px] lg:order-1">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             This <span className="text-pink-600">Portfolio</span> Website
           </div>
@@ -538,7 +552,7 @@ export default function Home(): React.ReactElement {
     </div>
 
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-container">
+      <div className="cool-flex-container pt-8 pb-8">
 
         <div className="music-column">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
@@ -565,8 +579,8 @@ export default function Home(): React.ReactElement {
     </div>
 
     <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden pb-12">
-      <div className="cool-container">
-        <div className="processor-column">
+      <div className="cool-flex-container">
+        <div className="processor-column lg:order-1">
           <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
             {/*This <span className="text-pink-600">Portfolio</span> Website*/}
             FPGA <span className="text-pink-600">Processor</span> in Verilog
@@ -613,9 +627,9 @@ export default function Home(): React.ReactElement {
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container">
 
-        <div className="uoft-column lg:order-1">
+        <div className="uoft-column">
           <div className="py-3">
-            <div className="inline-block ml-[-35px]">
+            <div className="ml-[-35px] mt-[-10px]">
               <Image src="/uoft3.png" alt="Grafstrom.dev Logo" width="400" height="0">
               </Image>
             </div>
@@ -668,7 +682,7 @@ export default function Home(): React.ReactElement {
 
     <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden">
       <div className="cool-flex-container-bottom">
-        <div className="contact-column flex items-center">
+        <div className="contact-column flex items-center lg:order-1">
           <div style={{height: "max-content"}}>
             <div className="text-5xl sm:text-7xl text-left font-bold">
               Let&apos;s Create the <span className="bg-gradient-to-br from-yellow-400 via-amber-600 to-orange-600 bg-clip-text text-transparent">Next Big Thing</span>!
