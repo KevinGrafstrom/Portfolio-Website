@@ -176,15 +176,18 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left pb-4 mt-4 mb-10 lg:mb-0">
 
-            I implemented the full data pipeline for downloading up to date car dealership inventory information
-            from <a style={{textDecoration: "underline", color: "blue"}} href={"https://lotlinx.com/"}>Lotlinx</a> and
-            processing it so that CarGenie directs users to relevant car listings. Our previous partnership
-            with <a style={{textDecoration: "underline", color: "blue"}} href={"https://www.autotempest.com/"}>AutoTempest</a> paid
-            much lower commissions. With Lotlinx, marginal revenue per ad conversion increased from $0.12 to $1.14.
-            I created a dashboard to show total click conversions and clicks per user for any time period. I used OpenAI
-            to generate a car information database so that no AI request is needed for the actual recommendation. This
-            reduced car recommendation wait time from 8 seconds to less than one second. I implemented an email server
-            (DKIM, DMARC, SPF) to avoid the cost of a transactional email service.
+            CarGenie AI is a car recommendation app. We make money when a user clicks a link to the car we recommend.
+            When I joined, we had a partnership
+            with <a style={{textDecoration: "underline", color: "blue"}} href={"https://www.autotempest.com/"}>AutoTempest</a>,
+            which paid us very little. I implemented the data pipeline necessary for us to work
+            with <a style={{textDecoration: "underline", color: "blue"}} href={"https://lotlinx.com/"}>Lotlinx</a> instead.
+            By doing this, marginal revenue per ad conversion increased from $0.12 to $1.14. This was crucial because
+            the cost per conversion of our ads is around $0.70, meaning that this move made us marginally profitable. I
+            created a dashboard to show total click conversions and clicks per user for any time period. There was another
+            problem. The recommendations took forever to load because they used an OpenAi call. To fix this, I used
+            OpenAI to generate a car information database so that no AI request is needed for the actual recommendation.
+            This reduced car recommendation wait time from 8 seconds to less than one second. To save money, I
+            implemented an email server (DKIM, DMARC, SPF) to avoid the cost of a transactional email service.
           </div>
         </div>
 
