@@ -198,7 +198,7 @@ export default function Home(): React.ReactElement {
         <iframe
           src="https://cargenie.co"
           width="100%"
-          height="700"
+          height="600"
           title="CarGenie"
         />
       </div>
