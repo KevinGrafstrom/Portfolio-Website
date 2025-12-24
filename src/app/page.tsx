@@ -155,11 +155,60 @@ export default function Home(): React.ReactElement {
            style={{bottom: "96px"}} ref={tenthText}>Exp.
       </div>
     </div>
-    {/*bg-blue-950*/}
+
     <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
+      <div className="cool-flex-container pt-10">
+        <div className="lg:max-w-[500px] xl:max-w-[600px] overflow-hidden lg:order-2">
+          <div className="mb-7 mt-0 text-6xl">
+            <div className={"bg-gradient-to-br from-white to-blue-200 w-[350px] h-30 rounded-2xl p-5 cursor-pointer"} onClick={() => window.open('https://cargenie.co', '_blank')}>
+              <div className={"mt-[-20px]"}>
+              <Image src="/cargenie logo.png" alt="Grafstrom.dev Logo" width="300" height="0"/>
+            </div>
+            </div>
+          </div>
+
+          <div className="text-2xl leading-9 text-left mb-7 overflow-hidden flex justify-between flex-col lg:flex-row">
+            <div className="float-left mr-4"><div><b>Full Stack Developer</b></div><div><b>(3 Month Contract)</b></div></div>
+
+            <div className=""><b>October 2025 - Present</b></div>
+
+          </div>
+
+          <div className="text-2xl text-left pb-4 mt-4 mb-10 lg:mb-0">
+
+            I implemented the full data pipeline for downloading up to date car dealership inventory information
+            from <a style={{textDecoration: "underline", color: "blue"}} href={"https://lotlinx.com/"}>Lotlinx</a> and
+            processing it so that CarGenie directs users to relevant car listings. Our previous partnership
+            with <a style={{textDecoration: "underline", color: "blue"}} href={"https://www.autotempest.com/"}>AutoTempest</a> paid
+            much lower commissions. With Lotlinx, marginal revenue per ad conversion increased from $0.12 to $1.14.
+            I created a dashboard to show total click conversions and clicks per user for any time period. I used OpenAI
+            to generate a car information database so that no AI request is needed for the actual recommendation. This
+            reduced car recommendation wait time from 8 seconds to less than one second. I implemented an email server
+            (DKIM, DMARC, SPF) to avoid the cost of a transactional email service.
+          </div>
+        </div>
+
+        <div className="cursor-pointer rounded-full overflow-hidden lg:max-w-[650px] mr-8" onClick={() => window.open('https://cargenie.co', '_blank')}>
+          <Image src="/cargenie cover.png" alt="Grafstrom.dev Logo" width="800" height="0">
+          </Image>
+        </div>
+      </div>
+
+      <div className="cool-flex-container pt-10">
+        <iframe
+          src="https://cargenie.co"
+          width="100%"
+          height="700"
+          title="CarGenie"
+        />
+      </div>
+    </div>
+
+    {/*bg-blue-950*/}
+    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container pt-14 pb-14">
 
-        <div className="chatkitty-column overflow-hidden lg:order-2">
+        <div className="chatkitty-column overflow-hidden">
 
           <div className={"flex items-center cursor-pointer mb-5"} onClick={() => window.open('https://chatkitty.com', '_blank')}>
             <div className="inline-block" style={{marginRight: "5px"}}>
@@ -172,15 +221,15 @@ export default function Home(): React.ReactElement {
           </div>
 
           <div className="text-2xl leading-9 text-left mb-7 overflow-hidden">
-            <div className="inline-block float-left mr-4"><b>Full Stack Developer</b></div>
+            <div className="float-left mr-4"><div><b>Full Stack Developer</b></div><div><b>(8 Month Contract)</b></div></div>
 
-            <div className="indigo-date"><b>March 2025 - Present</b></div>
+            <div className="indigo-date"><b>March 2025 - October 2025</b></div>
 
           </div>
 
           <div className="text-2xl text-left pb-4 mt-4">
 
-            I ported the ChatKitty application to allow embedding it in all major mobile SDKs and web frameworks.
+            I ported the ChatKitty application to allow embedding it in iOS, Android, and web frameworks.
             I also implemented a user interface in Vue and a backend in Spring for modifying the chat room membership settings.
             I added endpoints for asynchronous message delivery using the STOMP protocol while ensuring the accuracy of
             concurrent database transactions using locks with the Java Persistence API. I created an automated test suite
@@ -264,49 +313,6 @@ export default function Home(): React.ReactElement {
       </div>
     </div>
 
-    <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-flex-container pt-10 pb-5">
-        <div className="lg:max-w-[600px] overflow-hidden">
-          <div className="mb-7 mt-0 text-6xl">
-            <div className={"bg-gradient-to-br from-white to-blue-200 w-[350px] h-30 rounded-2xl p-5 cursor-pointer"} onClick={() => window.open('https://cargenie.co', '_blank')}>
-              <div className={"mt-[-20px]"}>
-              <Image src="/cargenie logo.png" alt="Grafstrom.dev Logo" width="300" height="0"/>
-            </div>
-            </div>
-          </div>
-
-          <div className="text-2xl leading-9 text-left mb-7 overflow-hidden">
-            <div className="inline-block float-left mr-4"><b>Full Stack Developer</b></div>
-
-            <div className="indigo-date"><b>October 2025 - Present</b></div>
-
-          </div>
-
-          <div className="text-2xl text-left pb-4 mt-4 mb-10 lg:mb-0">
-
-            I implemented the full data pipeline for downloading up to date car dealership inventory information and processing it
-            so that CarGenie directs users to relevant car listings. I fine tuned the system instructions and prompts to the
-            OpenAI model so that the user receives the most helpful car recommendations possible. I implemented asynchronous tasks
-            to classify available cars so that they can be considered properly when recommendations are made to the user.
-          </div>
-        </div>
-
-        <div className="cursor-pointer rounded-full overflow-hidden lg:max-w-[650px]" onClick={() => window.open('https://cargenie.co', '_blank')}>
-          <Image src="/cargenie cover.png" alt="Grafstrom.dev Logo" width="800" height="0">
-          </Image>
-        </div>
-      </div>
-
-      <div className="cool-flex-container pt-10 pb-10">
-        <iframe
-          src="https://cargenie.co"
-          width="100%"
-          height="700"
-          title="Example Website"
-        />
-      </div>
-    </div>
-
     <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
       <div className="cool-flex-container pt-10 pb-10">
         <div className="trainer-column overflow-hidden lg:order-1">
@@ -381,7 +387,7 @@ export default function Home(): React.ReactElement {
     </div>
 
     <div className="bg-gradient-to-br from-white to-blue-200 text-black overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-10 pb-10">
 
         <div className="lg:w-[600px] overflow-hidden lg:order-1">
           <div className="mb-4 mt-4 cursor-pointer" onClick={() => window.open('https://indigo.ca', '_blank')}>
@@ -435,7 +441,7 @@ export default function Home(): React.ReactElement {
 
 
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white pt-0 overflow-hidden">
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-12 pb-8">
         <div className="copilot-column">
           <div className="text-5xl sm:text-7xl text-left font-bold pb-4">
             Job Application <span className="text-pink-600">Copilot</span>
@@ -463,9 +469,9 @@ export default function Home(): React.ReactElement {
     </div>
 
     <div className="bg-gradient-to-br from-white to-blue-200 text-black">
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-12">
         <div className="social-column lg:order-1">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pb-4">
             Android <span className="text-pink-600">Social</span> Application
           </div>
 
@@ -479,7 +485,7 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="social-illustration">
+        <div className="">
           <Image className={"flip-horizontal"} src="social.svg" alt="Grafstrom.dev Logo" width="800" height="0"
                  style={{marginTop: '0px', marginBottom: "10px"}}>
           </Image>
@@ -494,10 +500,10 @@ export default function Home(): React.ReactElement {
     </div>
 
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white">
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-12">
 
         <div className="budget-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pb-4">
             Personal <span className="text-pink-600">Finance</span> Analyzer
           </div>
 
@@ -516,7 +522,7 @@ export default function Home(): React.ReactElement {
           </Image>
         </div>
       </div>
-      <div className="cool-flex-container">
+      <div className="cool-flex-container pt-12">
 
         <video width="1920" height="1080" controls preload="metadata">
           <source src="/analyzer.mp4#t=0.001" type="video/mp4"></source>
@@ -530,7 +536,7 @@ export default function Home(): React.ReactElement {
       <div className="cool-flex-container pt-10 pb-10">
 
         <div className="lg:w-[600px] lg:order-1">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+          <div className="text-5xl sm:text-7xl text-left font-bold pb-4">
             This <span className="text-pink-600">Portfolio</span> Website
           </div>
 
@@ -552,16 +558,16 @@ export default function Home(): React.ReactElement {
     </div>
 
     <div className="bg-gradient-to-br from-blue-950 to-blue-700 text-white overflow-hidden" style={{width: "100%"}}>
-      <div className="cool-flex-container pt-8 pb-8">
+      <div className="cool-flex-container pt-12 pb-12">
 
-        <div className="music-column">
-          <div className="text-5xl sm:text-7xl text-left font-bold pt-8 pb-4">
+        <div className="lg:max-w-[600px]">
+          <div className="text-5xl sm:text-7xl text-left font-bold pb-8">
             <span className="text-pink-600">Music</span> Trends <span
             className="text-pink-600">Prediction</span> Database
             {/*Personal <span className="text-pink-600">Finance</span> Analyzer*/}
           </div>
 
-          <div className="text-2xl text-left pb-4">
+          <div className="text-2xl text-left">
 
             A friend and I queried the Spotify API to transfer data for the most popular artists into a PostgreSQL
             database.
@@ -570,9 +576,9 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="music-illustration">
+        <div className="music-illustration mt-10 lg:mt-0">
           <Image src="music.svg" alt="Grafstrom.dev Logo" width="1000" height="0"
-                 style={{marginTop: '0px', marginBottom: "10px"}}>
+                 style={{marginTop: '0px'}}>
           </Image>
         </div>
       </div>
