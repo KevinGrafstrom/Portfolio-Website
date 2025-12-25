@@ -1,10 +1,15 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function ChetPage(): React.ReactElement {
   return (
     <html className="bg-blue-950">
+    <Head>
+        <title>Chet Rivoli Show</title>
+        <meta name="description" content="Watch the Chet Rivoli Show" />
+    </Head>
     <body>
     <header>
       <div className="bg-slate-100 fixed w-screen z-10">
