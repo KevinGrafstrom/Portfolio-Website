@@ -47,7 +47,7 @@ export default function ChetPage(): React.ReactElement {
           December 20, 2025
         </div>
         <video width="1920" height="1080" controls preload="metadata">
-          <source src="Dec 20 2025.mp4#t=0.001" type="video/mp4"></source>
+          <source src="Dec202025.mp4#t=0.001" type="video/mp4"></source>
           Your browser does not support the video tag.
         </video>
       </div>
