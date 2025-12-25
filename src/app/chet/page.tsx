@@ -1,7 +1,13 @@
-'use client';
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: 'Chet Rivoli Show',
+  description: 'Watch the Chet Rivoli Show'
+};
+
 
 export default function ChetPage(): React.ReactElement {
   return (
