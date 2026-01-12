@@ -168,7 +168,7 @@ export default function Home(): React.ReactElement {
           </div>
 
           <div className="text-2xl leading-9 text-left mb-7 overflow-hidden flex justify-between flex-col lg:flex-row">
-            <div className="float-left mr-4"><div><b>Full Stack Developer</b></div><div><b>(3 Month Contract)</b></div></div>
+            <div className="float-left mr-4"><div><b>Full Stack Developer</b></div><div><b>(4 Month Contract)</b></div></div>
 
             <div className=""><b>October 2025 - Present</b></div>
 
