@@ -200,8 +200,7 @@ export default function Home(): React.ReactElement {
       <div className="cool-flex-container pt-10">
         <iframe
           src="https://cargenie.co"
-          width="100%"
-          height="650"
+          className="w-full h-[450px] sm:h-[450px] md:h-[550px] lg:h-[550px] xl:h-[550px]"
           title="CarGenie"
         />
       </div>
@@ -247,66 +246,6 @@ export default function Home(): React.ReactElement {
         </div>
 
       </div>
-
-      <Script type="module" id={"hybrid-scroll-block"}>
-      {`
-        // Temporarily lock body scroll during chat initialization
-        const originalOverflow = document.body.style.overflow;
-        const originalPosition = document.body.style.position;
-        
-        document.body.style.overflow = 'hidden';
-        document.body.style.position = 'fixed';
-        document.body.style.width = '100%';
-      
-        // Restore after chat loads
-        setTimeout(() => {
-          document.body.style.overflow = originalOverflow;
-          document.body.style.position = originalPosition;
-          document.body.style.width = '';
-        }, 3000);
-      `}
-      </Script>
-
-
-
-      <Script src='https://cdn.chatkitty.com/lib.js'></Script>
-      <div className="w-[93%] max-w-[1290px] h-[420px] mx-auto mb-12 overflow-hidden chat-scroll-container">
-        <div id='chat-ui'></div>
-      </div>
-      <Script type="module" id={"load-chat"}>
-      {`
-        function initializeChatKitty() {
-          if (typeof ChatKitty !== 'undefined' && ChatKitty.loadChatUi) {
-            const {loadChatUi} = ChatKitty;
-            
-            loadChatUi(
-              {
-                widgetId: 'VT5zadmDlQ7WIAez',
-                username: "Kevin Grafstrom",
-                container: {
-                  height: '100%',
-                  width: '100%',
-                  responsive: {
-                    small: {
-                      breakpoint: 300
-                    }
-                  }
-                }
-              },
-              {
-                mode: 'sandbox'
-              }
-            );
-          } else {
-            // ChatKitty not ready yet, try again in 100ms
-            setTimeout(initializeChatKitty, 100);
-          }
-        }
-        
-        initializeChatKitty();
-
-      `}
-      </Script>
 
       <div className="cool-container">
         <video width="1920" height="1080" controls preload="metadata">
