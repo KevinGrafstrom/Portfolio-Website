@@ -176,18 +176,18 @@ export default function Home(): React.ReactElement {
 
           <div className="text-2xl text-left pb-4 mt-4 mb-10 lg:mb-0">
 
-            CarGenie AI is a car recommendation app. We make money when a user clicks a link to the car we recommend.
+            CarGenie AI is a car recommendation app. We make money when the user clicks a dealership link to the car we recommend.
             When I joined, we had a partnership
             with <a style={{textDecoration: "underline", color: "blue"}} href={"https://www.autotempest.com/"}>AutoTempest</a>,
-            which paid us very little. I implemented the data pipeline necessary for us to work
+            who paid us less per conversion than we were spending on ads. I implemented the data pipeline necessary for us to work
             with <a style={{textDecoration: "underline", color: "blue"}} href={"https://lotlinx.com/"}>Lotlinx</a> instead.
             By doing this, marginal revenue per ad conversion increased from $0.12 to $1.14. This was crucial because
-            the cost per conversion of our ads is around $0.70, meaning that this move made us marginally profitable. I
-            created a dashboard to show total click conversions and clicks per user for any time period. There was another
-            problem. The recommendations took forever to load because they used an OpenAi call. To fix this, I used
-            OpenAI to generate a car information database so that no AI request is needed for the actual recommendation.
-            This reduced car recommendation wait time from 8 seconds to less than one second. To save money, I
-            implemented an email server (DKIM, DMARC, SPF) to avoid the cost of a transactional email service.
+            the cost per conversion of our ads is around $0.70, meaning that this made us marginally profitable per dollar
+            spent on ads. I created a dashboard to show total click conversions and clicks per user for any time period.
+            Once the integration with Lotlinx was finalized, we felt that the recommendations took too long to load because
+            they required an OpenAI call. To fix this, I used OpenAI to generate a car information database so that no AI
+            request is needed for the actual recommendation. This reduced car recommendation wait time from 8 seconds to
+            less than one second.
           </div>
         </div>
 
